@@ -1,0 +1,198 @@
+
+/* Basic layout and navigation contributed by Qingyuan Zeng s316740 (lines 2 - 80)*/
+/* Images and visual design by Shaakya Weerasundera s307943. This is the design for COMPETITIONS AND INDUSTRY*/
+
+.navigation{
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-area: nav;
+  opacity: 0.5;
+  height: 3rem;
+  grid-template-areas: 'logo link socialMedia';
+  grid-template-columns: 15% 70% 15%;
+  transition: 0.28s ease;
+  border-bottom-style: solid;
+  border-bottom-width:1px;
+  border-color: rgb(220,220,220);
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navigationLogo{
+  display: flex;
+  flex-direction: row;
+  grid-area: logo;
+}
+
+.navigationLogo1{
+  display: flex;
+  justify-content: flex-start;
+  align-self:flex-start;
+}
+
+.navigationLogo2{
+  display: flex;
+  justify-content: flex-start;
+  align-self:flex-start;
+}
+
+.navigationLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 3rem;
+}
+
+
+.navigationLinks  a{
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgb(49, 48, 46);
+  text-decoration: none;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: 7%;
+  transition: 0.28s ease;
+  cursor: pointer;
+}
+
+.navigationLinks  a:hover{
+  background-color:rgb(76, 76, 76);
+  color: white;
+}
+
+.navigationSocialMedia{
+  grid-area: socialMedia;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+}
+
+.navigationSocialMedia a{
+  margin: 0 1rem;
+}
+
+
+/* This sets the size of the banner images for the pages*/
+.image{
+  max-width: 100%;
+}
+
+/* This sets the position and colour of the blurb under the top banner on the pages*/
+/* Contributed by Shaakya Weerasundera*/
+.industry_desc, .comps_main_head,
+.comps_desc, .industry_main_head{
+  text-align: center;
+  max-width:80%;
+  color: black;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Card_wrapping holds all the cards on the pages*/
+.comp_section_container, .chall_section_container,
+.industry_section_container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* This sets size for the FOR INDUSTRY and COMPETITION Pages*/
+.each_comp_container, .each_industry_container,
+.second_contain{
+  position: relative;
+  width: 30%;
+  height:450px;
+  margin: 20px 20px;
+  float:left;
+}
+
+/*Fit the screen and adjust size on a mobile web device for COMPETITION  and FOR INDUSTRY */
+@media screen and (max-width:600px)
+{
+
+    .each_comp_container,
+    .each_industry_container,
+    .second_contain
+    {
+      width:75%;
+      display:block;
+
+    }
+}
+
+
+/* Alignment settings*/
+
+.each_card{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-shadow: 0 4px 8px;
+}
+
+
+/* size and position of content*/
+.each_description{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Image adjustment settings*/
+.each_description .each_image{
+  max-width: 100%;
+  height: 60%;
+}
+
+/* Set the underline for the cards header*/
+hr{
+  width: 80%;
+  border: 1px solid black;
+}
+
+/* each card will have a black header style*/
+.card_head{
+  color: black;
+}
+
+/*footer design*/
+footer{
+  background-color: #dcdcdc;
+  padding: 20px 20px;
+  color: black
+}
+
+/* This sets the width of the left table data field located inside the footer*/
+.left {
+  width: 25%;
+}
+
+/* This sets the width of the middle table data field located inside the footer*/
+.middle{
+  width: 61%;
+  text-align: center;
+}
+
+/*The design for each seperated section*/
+.chall-head, .comp-head,
+.ind_head, .schools_head {
+  text-align: center;
+}
+
+.image, .main_industry_img, .main_comp_img {
+  width: 100%;
+}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles/EventsAboutForm.css" type="text/css" />
+</head>
+<body>
+
+    <!-- Contributed by Qingyuan Zeng s316740 -->
+    <div class="navigation" onmouseover="mouseOverNav()" onmouseout="mouseOutNav()">
+          <!-- Logo -->
+            <div class="navigationLogo">
+              <div class="navigationLogo1">
+                <a href="https://www.cdu.edu.au/"><img src="images/logo_CDU.png" style="width:8rem;height:3rem;" alt="CDU"/></a>
+              </div>
+
+              <div class="navigationLogo2">
+                <a href="https://kevin-1234.github.io/MVP_by_JSK"><img src="images/logo_ICF.png"  style="width:8rem;height:3rem;" alt="IT CODEFAIR"/></a>
+              </div>
+            </div>
+              <div class="navigationLinks">
+                <a href="#">Competitions</a>
+                <a href="https://kevin-1234.github.io/MVP_by_JSK/events.html">Events</a>
+                <a href="#">For Industry</a>
+                <a href="https://kevin-1234.github.io/MVP_by_JSK/about.html">About</a>
+                <a href="#">Resources</a>
+              </div>
+              <div class="navigationSocialMedia">
+                <a href="https://www.facebook.com/CDUENGIT/"><img src="images/facebook.png" style="width:1.7rem;height:1.7rem;" alt="FACEBOOK"/></a>
+                <a href="https://www.youtube.com/channel/UCEWii6myqFdcL8eb5PfcLow/playlists?view_as=subscriber"><img src="images/instagram.png" style="width:1.7rem;height:1.7rem;" alt="YOUTUBE"/></a>
+                <a href="https://www.instagram.com/itcodefair_cdu/"><img src="images/youtube.png" style="width:2.7rem;height:2.5rem;" alt="INSTAGRAM"/></a>
+              </div>
+    </div>
+
+<form  name = "form" class = "show" novalidate>
+  <div class = "form_container">
+      <div class = "title">
+        <h2>REGISTRATION FORM</h2>
+      </div>
+      <div class = "content">
+          <div class = "field">
+            <label>I am <span> *</span></label>
+            <div class = "select_menu">
+              <select id = "participant" name = "participant">
+                <option value = "">Select</option>
+                <option value = "student">Student</option>
+                <option value = "employer">Employer</option>
+              </select>
+            </div>
+         </div>
+         <div class = "field">
+           <label>Register for <span> *</span></label>
+           <div class = "select_menu">
+             <select>
+               <option value = "">Select</option>
+               <option value = "student">Cyber Security Challenge</option>
+               <option value = "employer">Employer Speed Dating</option>
+               <option value = "student">Business Innovation Challenge</option>
+               <option value = "employer">Coding Competition</option>
+               <option value = "student">Poster Competition</option>
+             </select>
+           </div>
+        </div>
+        <div class = "field">
+          <label>Skill Level<span> *</span></label>
+          <div class = "select_menu">
+            <select>
+              <option value = "">Select</option>
+              <option value = "employer">N/A (employers)</option>
+              <option value = "student">Developing (first year)</option>
+              <option value = "employer">Capable (second year)</option>
+              <option value = "student">Proficient (third, fourth year and masters)</option>
+            </select>
+          </div>
+       </div>
+       <div class = "field">
+          <label>First Name<span> *</span></label>
+          <input id = "fname_check" type = "text" class = "details" required>
+       </div>
+        <div class = "field">
+          <label>Last Name<span> *</span></label>
+          <input id = "lname_check" type = "text" class = "details"required>
+       </div>
+        <div class = "field">
+          <label>Email Address<span> *</span></label>
+          <input id = "email_check" type = "email" class = "details" required>
+       </div>
+      <div class = "field">
+          <label>Phone Number<span> *</span></label>
+          <input id = "phone_check" type = "number" class = "details" required>
+       </div>
+       <div>
+           <label class = "check">
+             <input type = "checkbox">
+             <span class = "checked"></span>
+           </label>
+          <p>Register a Team</p>
+      </div>
+      <div class = "field">
+          <label>Comments</label>
+          <textarea class = "textbox" placeholder = "Team name and members."></textarea>
+       </div>
+      <div class = "field">
+        <button type = "submit" id = "button" class = "btn">Register</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<div>
+
+  <h2 class = "submission_text">Your form has been successfully submitted.
+    <br>
+    <br>
+    Thank you for registering!</h2>
+</div>
+
+  <!-- The footer includes team member names, copyright and IT CodeFair contact e-mail -->
+  <footer>
+        <p>Copyright Team JSK</p>
+  </footer>
+<script src="scripts/form.js"> </script>
+</body>
+</html>

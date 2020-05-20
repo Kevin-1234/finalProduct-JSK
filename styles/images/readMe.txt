@@ -1,0 +1,1 @@
+This is the folder to keep images for CSS files!

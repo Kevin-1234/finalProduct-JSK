@@ -1,0 +1,864 @@
+/* CSS file for the site Home page and Resources page by Qingyuan Zeng*/
+/* Sponser cards (from line 377-454), footer designs and timetable picture are contributed by Jani Junno*/
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.wrapping{
+  display:grid;
+  font-family:Helvetica;
+  grid-template-areas:
+  'banner'
+  'mainContent'
+  'footer';
+  width: 100%;
+}
+
+/*side navigation*/
+.nav{
+  position: fixed;
+  z-index: 3;
+  }
+.sideNav{
+  display: grid;
+  grid-row-gap: 18%;
+  grid-template-columns: 3rem;
+  grid-template-rows: auto auto auto;
+  height: 23%;
+  list-style: none;
+  margin-left: 2%;
+  margin-top: 22%;
+  opacity: 0.5;
+  padding-left: 0;
+  position: fixed;
+  transition: 0.5s ease;
+  width: 2.32%;
+  z-index: 3;
+}
+
+.sideNav  a{
+  align-items: center;
+  border-color: black;
+  border-radius: 1.5rem;
+  border-width: 1px;
+  color: black;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  height: 2rem;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.5s ease;
+  width: 2rem;
+}
+
+.sideNav:hover{
+  opacity: 1;
+}
+
+.sideNav:hover a{
+  transform: scale(1.3);
+}
+
+/*3 anchors to locate 3 sections in the web page*/
+.anchor1{
+  position: absolute;
+  margin-top: 0px;
+}
+.anchor2{
+  position: absolute;
+  margin-top: 5600px;
+}
+.anchor3{
+  position: absolute;
+  margin-top: 7600px;
+}
+
+
+.banner{
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("images/banner6.jpg");
+  background-position: 50% 35%;
+  background-size:cover;
+  color: white;
+  display: grid;
+  grid-area: banner;
+  grid-template-areas:
+  'nav'
+  'heading';
+  height: 70rem;
+  width: 100%;
+}
+/* the prefix 'res_' means this class is for Resources page*/
+.res_banner{
+  background-color: grey;
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url('images/resources.jpg');
+  background-position: 50% 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: grid;
+  grid-area: banner;
+  grid-template-areas:
+  'nav'
+  'heading';
+  height:28rem;
+}
+
+
+.navigation{
+  background-color: rgb(250, 250, 250);
+  border-bottom-style: solid;
+  border-bottom-width:1px;
+  border-color: rgb(220,220,220);
+  display: grid;
+  grid-area: nav;
+  grid-template-areas: 'logo links socialMedia';
+  grid-template-columns: 15% 70% 15%;
+  height: 3rem;
+  opacity: 0.5;
+  transition: 0.28s ease;
+  width: 100%;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navigationLogo{
+  display: flex;
+  flex-direction: row;
+  grid-area: logo;
+  height: 3rem;
+  justify-content: center;
+  width: 100%;
+}
+.navigationLogo1{
+  align-self:flex-start;
+  display: flex;
+  justify-content: flex-start;
+}
+.navigationLogo2{
+  align-self:flex-start;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navigationLinks {
+  align-items: center;
+  display: flex;
+  grid-area: links;
+  height: 3rem;
+  justify-content: center;
+  width: 100%;
+}
+.navigationLinks ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content:flex-end;
+  list-style: none;
+  margin: 0;
+  width: 100%;
+}
+.navigationLinks  li{
+margin-right: 2%;
+}
+.navigationLinks a{
+  align-items: center;
+  color: rgb(49, 48, 46);
+  cursor: pointer;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 600;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-decoration: none;
+  transition: 0.28s ease;
+}
+.navigationLinks  a:hover{
+  background-color:rgb(76, 76, 76);
+  color: white;
+}
+.navigationSocialMedia{
+  align-items: center;
+  display: flex;
+  grid-area: socialMedia;
+  height: 3rem;
+  justify-content: center;
+  width: 100%;
+}
+.navigationSocialMedia a{
+  margin: 0 1rem;
+}
+.heading{
+  align-content: center;
+  display: flex;
+  grid-area: heading;
+  justify-content: center;
+  padding-bottom: 10%;
+  text-align: center;
+}
+.heading h1{
+  font-size: 3rem;
+}
+.heading span{
+  font-size: 1.2rem;
+}
+
+
+.mainContent{
+  display: grid;
+  grid-area: mainContent;
+  grid-template-areas:
+  'infoButtons infoButtons infoButtons'
+  'display display display'
+  'sponsors sponsors sponsors'
+  'timeTable timeTable timeTable';
+  height: 500rem;
+  text-align: center;
+}
+
+/*Information buttons container */
+.infoButtons{
+  align-content: center;
+  background-color: rgb(240, 240, 240);
+  display: grid;
+  grid-area:infoButtons;
+  grid-template-columns:20rem 20rem 20rem;
+  grid-template-rows: 15rem;
+  height: 17%;
+  justify-content: space-evenly;
+  position: sticky;
+  text-align: center;
+  top:3%;
+  transition: 1s ease;
+  z-index: -1;
+}
+/*buttons for what, where and events*/
+.what, .where, .when{
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  color: black;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s ease;
+  width: 100%;
+  height: 100%;
+}
+.what{
+  background-image: linear-gradient(rgb(0, 8, 85, 0.7), rgba(255,255,255,0.7));
+}
+.where {
+  background-image: linear-gradient(rgb(132, 0, 1, 0.6), rgb(55, 56, 55, 0.6));
+}
+.when {
+  background-image: linear-gradient(rgb(132, 0, 1, 0.7), rgb(0, 8, 85, 0.4));
+}
+
+/*information display panel container*/
+.displayContainer{
+  display: grid;
+  grid-area: display;
+  grid-template-areas: 'show1 show2';
+  grid-template-columns: minmax(auto, 50%) minmax(auto, 50%);
+  height: 45rem;
+  opacity: 0;
+  position: sticky;
+  top:20rem;
+  transition: 1s ease;
+  width: 100%;
+  z-index: -1;
+}
+/*information text display panels*/
+.whatDisplayText, .whereDisplayText, .whenDisplayText{
+  align-items: center;
+  color: white;
+  display: flex;
+  font-size: 2.2rem;
+  grid-area: show1;
+  justify-content: center;
+  opacity: 0;
+  position: relative;
+  transition: 0.5s ease;
+  z-index: 1;
+}
+.whatDisplayText{
+  background-color: rgb(0, 8, 85, 1);
+  background-image: linear-gradient(rgb(0, 8, 85, 1), rgba(255,255,255,0.5));
+  z-index: 2;
+}
+.whereDisplayText{
+  background-color: rgb(132, 0, 1, 1);
+  background-image: linear-gradient(rgb(132, 0, 1, 1), rgba(55, 56, 55,0.7));
+}
+.whenDisplayText{
+  background-color: rgb(132, 0, 1, 1);
+  background-image: linear-gradient(rgb(132, 0, 1, 1), rgb(0, 8, 85, 0.5), rgb(0, 8, 85, 0.8));
+}
+.whatDisplayText  p,  .whereDisplayText p,  .whenDisplayText p{
+  font-size: 2rem;
+ height: 60%;
+ display: flex;
+ flex-direction: column;
+ justify-content:space-around;
+}
+/*information media display panels*/
+.whatDisplay, .whereDisplay, .whenDisplay{
+  grid-area: show2;
+  height: 100%;
+  opacity: 0;
+  position: relative;
+  transition: 0.5s ease;
+  width: 100%;
+  z-index: 1;
+}
+.whatDisplay{
+  z-index: 2;
+}
+.whatDisplay iframe{
+  height: 100%;
+  width: 100%;
+  border-style: none;
+}
+.whenDisplay{
+  background-image: url("images/events.jpg");
+  background-position: 50% 50%;
+}
+ .map{
+   width: 100%;
+   height: 100%;
+ }
+
+ /*class for timetable section*/
+.timeTable{
+  background-image: url("images/timeTable.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: black;
+  grid-area: timeTable;
+  height: 25rem;
+  opacity: 0;
+  position: sticky;
+  top:3rem;
+  transition: 0.5s ease;
+  width: 100%;
+  z-index: -1;
+}
+
+/*container fpr sponser cards*/
+.sponsors{
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  grid-area: sponsors;
+  height: 18rem;
+  justify-content: space-around;
+  opacity: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  position: sticky;
+  top:30rem;
+  transition: 0.5s ease;
+  z-index: -1;
+}
+
+
+
+/* the size and positions of the containers that include the cards are set here*/
+.container{
+  position: relative;
+  width: 210px;
+  height:24rem;
+  float:left;
+}
+
+/* This sets the size, colour and shape of the cards*/
+.card{
+  position:relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px;
+}
+
+/* This sets the size, colour and shape of the front of the cards*/
+.front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: white;
+  border-radius: 20px;
+}
+
+
+/* This sets the size and position of Platinum Sponsor logos*/
+.front .platinum{
+  padding-top: 25px;
+  max-width: 85%;
+}
+
+/* This sets the size and position of Gold Sponsor logos*/
+.front .gold{
+  padding-top: 50px;
+  max-width: 85%;
+}
+
+/* This sets the size and position of Silver Sponsor logos*/
+.front .silver{
+  max-width: 70%;
+}
+
+/* This sets the size and position of Bronze Sponsor logos*/
+.front .bronze{
+  max-width: 33%;
+}
+
+/* This sets the text color for Platinum Sponsor card*/
+.platinum_sponsors{
+  color:#E5E4E2
+}
+
+/* This sets the text color for Gold Sponsor card*/
+.gold_sponsors{
+  color:gold
+}
+
+/* This sets the text color for Silver Sponsor card*/
+.silver_sponsors{
+  color:silver
+}
+
+/* This sets the text color for Bronze Sponsor card*/
+.bronze_sponsors{
+  color:#cd7f32
+}
+
+/* This sets the features for the underline under the card headings*/
+hr{
+  width: 80%;
+  border: 1px solid black;
+}
+
+/*the prefix 'res_' means the class is for Resources page*/
+.res_mainContent{
+  display: grid;
+  grid-area: mainContent;
+  grid-template-areas:
+  'slogan slogan slogan'
+  'res_display res_display res_display';
+  text-align: center;
+}
+
+.res_slogan{
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.7rem;
+  font-weight: 600;
+  grid-area: slogan;
+  justify-content: space-between;
+  padding-top: 2%;
+}
+/*this class is the container for the display area that shows series of resources */
+.res_display{
+  display: grid;
+  grid-area: res_display;
+  grid-template-areas:
+  'resource1-1 resource1-2 resource1-3'
+  'content1 content2 content3';
+  grid-template-columns: 25rem 25rem 25rem;
+  grid-template-rows: 20rem 20rem;
+  height: 50rem;
+  justify-content: space-around;
+  padding-top: 2%;
+  text-decoration: none;
+}
+
+.res_display a{
+  color:black;
+  text-decoration:none;
+  transition: 0.3s ease;
+
+}
+.res_display a:hover{
+  color: rgb(158, 8, 7);
+}
+/*resource cubes*/
+.resource1-1, .resource1-2, .resource1-3{
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  filter: blur(3px);
+  position: relative;
+  transition:0.5s ease;
+  width: 100%;
+}
+.resource1-1{
+  background-image: url("images/poster.jpg");
+  grid-area: resource1-1;
+}
+.resource1-2{
+  background-image: url("images/webDev.jpg");
+  grid-area: resource1-2;
+}
+.resource1-3{
+  background-image: url("images/presentation.JPG");
+  grid-area: resource1-3;
+}
+
+/*resource title masks*/
+.resource1-1Title, .resource1-2Title, .resource1-3Title{
+  align-items: center;
+  background-color: rgb(255,255,255,0.4);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  color:black;
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  opacity: 1;
+  position: relative;
+  transition: 0.5s ease;
+  width: 100%;
+  z-index: 2;
+}
+.resource1-1Title{
+  grid-area: resource1-1;
+}
+.resource1-2Title{
+  grid-area: resource1-2;
+}
+.resource1-3Title{
+  grid-area: resource1-3;
+}
+/*resources display panels for each resource cube*/
+.resource1-1_panel, .resource1-2_panel, .resource1-3_panel{
+  background-image: linear-gradient(rgb(210,210,210),rgb(180,180,180));
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  display: none;
+  font-size: 1.3rem;
+  font-weight: 400;
+  height: 0rem;
+  opacity:0;
+  position: relative;
+  width: 100%;
+}
+.resource1-1_panel{
+  grid-area: content1;
+}
+.resource1-2_panel{
+  grid-area: content2;
+}
+.resource1-3_panel{
+  grid-area: content3;
+}
+
+.resource1-1_panel ul, .resource1-2_panel ul, .resource1-3_panel ul {
+  list-style: none;
+  text-align: left;
+  line-height: 1.5rem;
+  text-indent: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.footer{
+  background-color: #dcdcdc;
+  color: black;
+  grid-area: footer;
+  height:5.5rem;
+  padding: 20px 20px;
+  position: sticky;
+  top: 92.5%;
+  transition: 0.5s ease;
+  z-index: -1;
+}
+.left {
+  width: 25%;
+}
+.middle{
+  width: 61%;
+  text-align: center;
+}
+
+
+.res_footer{
+  background-color: #dcdcdc;
+  color: black;
+  font-size: 0.8rem;
+  grid-area: footer;
+  height: 7rem;
+  padding: 20px 20px;
+}
+
+
+
+@media screen and (max-height: 876px){
+  .displayContainer{
+    height:38rem;
+    top:15rem;
+  }
+  .what, .where, .when{
+    height: 10rem;
+  }
+  .timeTable{
+    height:20rem;
+  }
+  .container{
+    height:20rem;
+  }
+  .sponsors{
+    top:24rem;
+  }
+}
+
+@media screen and (max-height: 745px){
+  .displayContainer{
+    height:28rem;
+  }
+  .timeTable{
+    height:18rem;
+  }
+  .container{
+    height:20rem;
+  }
+  .sideNav{
+    margin-top: 19rem;
+  }
+  .sponsors{
+    top:22rem;
+  }
+
+}
+@media screen and (max-height: 655px){
+  .displayContainer{
+    height:23rem;
+  }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+  .navigation{
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    'logo socialMedia'
+    'links links';
+    height: 6rem;
+  }
+
+  .navigationLinks ul{
+    justify-content:space-evenly;
+  }
+
+}
+@media screen and (max-width: 980px) and (min-width: 506px){
+  .navigation{
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    'logo socialMedia'
+    'links links';
+    height: 6rem;
+  }
+  .navigationLinks ul{
+    justify-content:flex-start;
+  }
+  .navigationLogo{
+    justify-content: flex-start;
+  }
+  .navigationSocialMedia{
+    justify-content: flex-start;
+  }
+  .what, .where, .when{
+    width: 15rem;
+  }
+  .when{
+    margin-right: 10rem;
+  }
+  .displayContainer{
+    width: 50rem;;
+    justify-content: center;
+  }
+ .infoButtons{
+   display: flex;
+ }
+
+}
+
+@media screen and (max-width: 775px) {
+
+  .what, .where, .when{
+    width: 10rem;
+    height:10rem;
+  }
+  .when{
+    margin-right: 18rem;
+  }
+  .displayContainer{
+    width: 40rem;;
+    justify-content: center;
+  }
+ .infoButtons{
+   display: flex;
+   align-items: center;
+   align-content: center;
+ }
+
+}
+
+@media screen and (max-width: 625px) {
+
+  .what, .where, .when{
+    width: 7rem;
+    height:7rem;
+    font-size: 1.3rem;
+  }
+  .when{
+    margin-right: 25rem;
+  }
+  .displayContainer{
+    width: 32rem;;
+    justify-content: center;
+  }
+ .infoButtons{
+   display: flex;
+   align-items: center;
+   align-content: center;
+ }
+
+}
+
+@media screen and (max-width: 505px) and (min-width: 0px){
+  .navigation{
+    grid-template-columns: 100%;
+    grid-template-areas:
+    'logo'
+    'socialMedia'
+    'links';
+    height: 10rem;
+  }
+  .navigationLinks ul{
+    justify-content:center;
+  }
+  .heading h1{
+    font-size: 2rem;
+  }
+  .sideNav{
+    margin-top: 70%;
+  }
+  .banner{
+    width: 100%;
+    background-position: 70% 35%;
+  }
+  .mainContent{
+    grid-template-areas:
+    'display display display'
+    'sponsors sponsors sponsors'
+    'timeTable timeTable timeTable'
+    'footer footer footer';
+    width: 100%;
+  }
+  .infoButtons{
+    display: none;
+  }
+  .displayContainer{
+    top: 20%;
+    grid-template-areas:
+    'show1'
+    'show2';
+    grid-template-rows: 22rem 22rem;
+    grid-template-columns: auto;
+    }
+    .whatDisplayText{
+      font-size: 1.5rem;
+    }
+  .timeTable{
+    display: none;
+  }
+  .sponsors{
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 25%;
+    justify-content: space-around;
+    top:20%;
+    width: 100%;
+  }
+  .container{
+    width: 10rem;
+    height: 20rem;
+  }
+  .footer{
+    height:6%;
+    top: 88.5%;
+  }
+}
+
+
+@media screen and (max-width: 1230px) and (min-width:751px){
+  .resource1-1,.resource1-2,.resource1-3,.resource1-1Title,.resource1-2Title,.resource1-3Title, .resource1-1_panel, .resource1-2_panel, .resource1-3_panel {
+    font-size: 1.2rem;
+  }
+  .res_display{
+    grid-gap: 0px;
+    grid-template-areas:
+    'resource1-1 resource1-2 resource1-3 '
+    'content1 content2 content3 ';
+    grid-template-columns: 15rem 15rem 15rem;
+    grid-template-rows: 15rem;
+    background-color: grey;
+  }
+
+}
+
+@media screen and (max-width: 750px) {
+  .res_mainContent{
+    grid-template-rows:auto 140rem auto;
+  }
+  .res_footer{
+    font-size: 0.8rem;
+  }
+  .res_display{
+    grid-template-columns: 25rem;
+    grid-template-rows: 20rem 25rem 20rem 25rem 20rem 25rem;
+    grid-template-areas:
+    'resource1-1'
+    'content1'
+    'resource1-2'
+    'content2'
+    'resource1-3 '
+    'content3 ';
+  }
+
+}
+@media screen and (max-height: 800px) {
+  .res_display{
+    grid-template-rows: 17.5rem 22rem;
+  }
+
+}
