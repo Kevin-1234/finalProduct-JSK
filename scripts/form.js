@@ -1,17 +1,7 @@
 
-var test = document.querySelector('.submission_text');
-var show = document.querySelector('.form_container');
-test.classList.add('hidden');
-
-function submissionSuccessfull(evt){
-    evt.preventDefault();
-
-    test.classList.remove('hidden');
-    //hidden.classList.add('.show')
-    //show.classList.remove('show');
-    show.classList.add('hidden');
-    //btn.parentNode.removeChild(btn);
-}
+var submission_text = document.querySelector('.submission_text');
+var form = document.querySelector('.form_container');
+submission_text.classList.add('hidden');
 
 function checkFields(evt){
       evt.preventDefault();
@@ -19,18 +9,34 @@ function checkFields(evt){
       var lname = document.getElementById("lname_check").value;
       var email = document.getElementById("email_check").value;
       var phone = document.getElementById("phone_check").value;
-      var participant = document.getElementById("participant");
-      if ( name ==='' || lname ==='' || email ==='' || phone ==='' || participant.selectIndex === "Select"){
+      var participant = document.getElementById("participant").value;
+      var activity = document.getElementById("activity").value;
+      var skill = document.getElementById("skill").value;
+      if ( name ==='' || lname ==='' || email ==='' || phone ==='' || participant === '' || activity === '' || skill === ''){
         alert("All required fields must be filled out");
       }
       else{
-        test.classList.remove('hidden');
-        //hidden.classList.add('.show')
-        //show.classList.remove('show');
-        show.classList.add('hidden');
-        //btn.parentNode.removeChild(btn);
+        submission_text.classList.remove('hidden');
+        form.classList.add('hidden');
+
       }
 }
 
-
 document.getElementById('button').addEventListener('click', checkFields);
+
+
+var hiddenbox = document.querySelector(".hiddenbox");
+hiddenbox.classList.add('hidden')
+
+function isChecked(evt){
+      var checkBox = document.getElementById("clickCheck");
+      var hiddenbox = document.getElementById("hiddenbox");
+
+      if (checkBox.checked == true){
+        hiddenbox.classList.remove('hidden')
+      } else {
+        hiddenbox.classList.add('hidden');
+      }
+}
+
+document.getElementById('clickCheck').addEventListener('click', isChecked)

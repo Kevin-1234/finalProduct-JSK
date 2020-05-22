@@ -34,93 +34,100 @@
               </div>
     </div>
 
-<form  name = "form" class = "show" novalidate>
-  <div class = "form_container">
-      <div class = "title">
-        <h2>REGISTRATION FORM</h2>
-      </div>
-      <div class = "content">
-          <div class = "field">
-            <label>I am <span> *</span></label>
-            <div class = "select_menu">
-              <select id = "participant" name = "participant">
-                <option value = "">Select</option>
-                <option value = "student">Student</option>
-                <option value = "employer">Employer</option>
-              </select>
-            </div>
-         </div>
-         <div class = "field">
-           <label>Register for <span> *</span></label>
-           <div class = "select_menu">
-             <select>
-               <option value = "">Select</option>
-               <option value = "student">Cyber Security Challenge</option>
-               <option value = "employer">Employer Speed Dating</option>
-               <option value = "student">Business Innovation Challenge</option>
-               <option value = "employer">Coding Competition</option>
-               <option value = "student">Poster Competition</option>
-             </select>
-           </div>
-        </div>
-        <div class = "field">
-          <label>Skill Level<span> *</span></label>
-          <div class = "select_menu">
-            <select>
-              <option value = "">Select</option>
-              <option value = "employer">N/A (employers)</option>
-              <option value = "student">Developing (first year)</option>
-              <option value = "employer">Capable (second year)</option>
-              <option value = "student">Proficient (third, fourth year and masters)</option>
-            </select>
-          </div>
-       </div>
-       <div class = "field">
-          <label>First Name<span> *</span></label>
-          <input id = "fname_check" type = "text" class = "details" required>
-       </div>
-        <div class = "field">
-          <label>Last Name<span> *</span></label>
-          <input id = "lname_check" type = "text" class = "details"required>
-       </div>
-        <div class = "field">
-          <label>Email Address<span> *</span></label>
-          <input id = "email_check" type = "email" class = "details" required>
-       </div>
-      <div class = "field">
-          <label>Phone Number<span> *</span></label>
-          <input id = "phone_check" type = "number" class = "details" required>
-       </div>
-       <div>
-           <label class = "check">
-             <input type = "checkbox">
-             <span class = "checked"></span>
-           </label>
-          <p>Register a Team</p>
-      </div>
-      <div class = "field">
-          <label>Comments</label>
-          <textarea class = "textbox" placeholder = "Team name and members."></textarea>
-       </div>
-      <div class = "field">
-        <button type = "submit" id = "button" class = "btn">Register</button>
-      </div>
+    <!-- Image banner on top of the page -->
+    <div class="event_image">
+      <img class="image" src="images/registration.jpg" alt="Registration Form Banner"/>
     </div>
-  </div>
-</form>
 
-<div>
+    <!-- Registration form -->
+    <form  name = "form" class = "show" novalidate>
+      <div class = "form_container">
+          <div class = "title">
+            <h2>REGISTRATION FORM</h2>
+          </div>
+          <div class = "content">
+              <div class = "field">
+                <label>I am <span> *</span></label>
+                <div class = "select_menu">
+                  <select id = "participant" name = "participant">
+                    <option value = "">Select</option>
+                    <option value = "student">Student</option>
+                    <option value = "employer">Employer</option>
+                  </select>
+                </div>
+             </div>
+             <div class = "field">
+               <label>Register for <span> *</span></label>
+               <div class = "select_menu">
+                 <select id = "activity" name = "activity">
+                   <option value = "">Select</option>
+                   <option value = "cyber">Cyber Security Challenge</option>
+                   <option value = "employer_speed">Employer Speed Dating</option>
+                   <option value = "business">Business Innovation Challenge</option>
+                   <option value = "coding">Coding Competition</option>
+                   <option value = "poster">Poster Competition</option>
+                 </select>
+               </div>
+            </div>
+            <div class = "field">
+              <label>Skill Level<span> *</span></label>
+              <div class = "select_menu">
+                <select id = "skill" name = "skill">
+                  <option value = "">Select</option>
+                  <option value = "na">N/A (employers)</option>
+                  <option value = "first">Developing (first year)</option>
+                  <option value = "second">Capable (second year)</option>
+                  <option value = "third">Proficient (third, fourth year and masters)</option>
+                </select>
+              </div>
+           </div>
+           <div class = "field">
+              <label>First Name<span> *</span></label>
+              <input id = "fname_check" type = "text" class = "details" required>
+           </div>
+            <div class = "field">
+              <label>Last Name<span> *</span></label>
+              <input id = "lname_check" type = "text" class = "details"required>
+           </div>
+            <div class = "field">
+              <label>Email Address<span> *</span></label>
+              <input id = "email_check" type = "email" class = "details" required>
+           </div>
+          <div class = "field">
+              <label>Phone Number<span> *</span></label>
+              <input id = "phone_check" type = "number" class = "details" required>
+           </div>
+           <div class = "field">
+               <label class = "check">
+                 <input type = "checkbox" id="clickCheck" onclick="isChecked()">
+                 <span class = "checked"></span>
+               </label>
+               <label>Register a Team</label>
+          </div>
+          <textarea class = "hiddenbox" id = "hiddenbox" placeholder = "Team name and members."></textarea>
+          <div class = "field">
+              <label>Comments</label>
+              <textarea class = "textbox" placeholder = "Additional comments."></textarea>
+           </div>
+          <div class = "field">
+            <button type = "submit" id = "button" class = "btn">Register</button>
+          </div>
+        </div>
+      </div>
+    </form>
 
-  <h2 class = "submission_text">Your form has been successfully submitted.
-    <br>
-    <br>
-    Thank you for registering!</h2>
-</div>
+    <!-- Text to show after user submits the registration form -->
+    <div>
+      <h2 class = "submission_text"><br><br><br><br><br><br>Your form has been successfully submitted.
+        <br>
+        <br>
+        Thank you for registering!</h2><br><br><br><br><br><br><br><br>
+    </div>
 
-  <!-- The footer includes team member names, copyright and IT CodeFair contact e-mail -->
-  <footer>
-        <p>Copyright Team JSK</p>
-  </footer>
+      <!-- The footer includes team member names, copyright and IT CodeFair contact e-mail -->
+      <footer>
+            <p>Copyright Team JSK</p>
+      </footer>
 <script src="scripts/form.js"> </script>
 </body>
 </html>

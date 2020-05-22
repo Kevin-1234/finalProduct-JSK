@@ -242,7 +242,8 @@ footer{
 /* More info page starts here */
 
 .more_info_container{
-  max-width:80%;
+  width:80%;
+  max-width: 900px;
   color: #333333;
   margin-left: auto;
   margin-right: auto;
@@ -255,13 +256,31 @@ footer{
 .more_info_content{
   padding: 20px;
   box-shadow: 0 4px 8px;
+  background: #dcdcdc;
 }
+
+.students_container{
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-columns: auto auto auto;
+}
+
+.student{
+  background: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  box-shadow: 0 4px 4px;
+}
+
 
 /*Registration form css starts here */
 
 /* Container that holds the content */
 .form_container{
-  max-width: 40%;
+  width: 80%;
+  max-width: 500px;
   margin: 20px auto;
   box-shadow: 0 4px 8px;
   padding: 20px;
@@ -289,8 +308,9 @@ label{
 
 /* Styling for text fields on the form */
 .details,
-.textbox{
-  width: 100%;
+.textbox,
+.hiddenbox{
+  width: 95%;
   outline: none;
   border: 1px solid #d5dbd9;
   font-size: 15px;
@@ -298,6 +318,7 @@ label{
   border-radius: 3px;
   transition: all 0.3s ease;
 }
+
 
 /* Position and size for the select menus on the form */
 .select_menu{
@@ -394,10 +415,11 @@ textarea{
   display: none;
 }
 
-.show{
-  display: block;
-}
-
 span{
   color: #ff2020;
+}
+
+p,
+strong{
+  font-size: 20px;
 }
