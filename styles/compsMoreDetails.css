@@ -1,0 +1,129 @@
+body{
+  font-family: Garamond;
+}
+/* Contributed by Qingyuan Zeng s316740 (lines 2 - 80)*/
+.navigation{
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-area: nav;
+  opacity: 0.5;
+  height: 3rem;
+  grid-template-areas: 'logo link socialMedia';
+  grid-template-columns: 15% 70% 15%;
+  transition: 0.28s ease;
+  border-bottom-style: solid;
+  border-bottom-width:1px;
+  border-color: rgb(220,220,220);
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navigationLogo{
+  display: flex;
+  flex-direction: row;
+  grid-area: logo;
+}
+
+.navigationLogo1{
+  display: flex;
+  justify-content: flex-start;
+  align-self:flex-start;
+}
+
+.navigationLogo2{
+  display: flex;
+  justify-content: flex-start;
+  align-self:flex-start;
+}
+
+.navigationLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 3rem;
+}
+
+
+.navigationLinks  a{
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgb(49, 48, 46);
+  text-decoration: none;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: 7%;
+  transition: 0.28s ease;
+  cursor: pointer;
+}
+
+.navigationLinks  a:hover{
+  background-color:rgb(76, 76, 76);
+  color: white;
+}
+
+.navigationSocialMedia{
+  grid-area: socialMedia;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+}
+
+.navigationSocialMedia a{
+  margin: 0 1rem;
+}
+
+
+/* Contributed by Jani Junno s321614 (lines 86 - 259) *
+
+
+/* This sets the size of the banner images for the pages*/
+.comps_info_cover_image{
+  max-width: 100%;
+}
+
+/* This sets the position and colour of the blurb under the top banner on the pages*/
+.heading, .caption{
+  text-align: center;
+  max-width:80%;
+  color: #333333;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* This sets the background colour, padding and text colour for footer*/
+footer{
+  background-color: #dcdcdc;
+  padding: 20px 20px;
+  color: #333333;
+  text-align: center;
+}
+
+
+/* Competitions More Details page (Contributed by Shaakya Weerasundera s307943)*/
+
+.comps_details_container{
+  width:80%;
+  max-width: 900px;
+  color: #333333;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* This style is for every card (coding Competition, poster Competition, Business Innovation Challenge, Cybersecurity Challenge )*/
+
+.coding, .poster, .bic, .cyber{
+  padding: 20px;
+  box-shadow: 0 4px 8px;
+  background: #dcdcdc;
+  text-align: center;
+}
