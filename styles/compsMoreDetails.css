@@ -125,5 +125,9 @@ footer{
   padding: 20px;
   box-shadow: 0 4px 8px;
   background: #dcdcdc;
-  text-align: center;
+}
+
+p,
+strong{
+  font-size: 20px;
 }
