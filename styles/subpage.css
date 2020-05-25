@@ -1,1 +1,126 @@
-
+/*contests page main content section*/
+.contests_mainContent{
+  background-color: rgb(76, 33, 42);
+  display: grid;
+  grid-area: mainContent;
+  grid-template-areas:
+  'competitions'
+  'challenges';
+}
+/*competitions and challenges sub sections*/
+.contests_competitions, .contests_challenges{
+  display: grid;
+  grid-column-gap: 1.5rem;
+  grid-template-columns: 35rem 35rem;
+  grid-template-rows: 10rem 24rem;
+  justify-content: center;
+  transition: 0.5s ease;
+}
+.contests_competitions{
+  grid-area: competitions;
+  grid-template-areas:
+  'title title'
+  'competitions_CC competitions_PC';
+}
+.contests_challenges{
+  grid-area: challenges;
+  grid-template-areas:
+  'title title'
+  'challenges_BIC challenges_CSC';
+  padding-bottom: 5rem;
+}
+/* titles for competitions and challenges sub sections*/
+.competitions_title, .challenges_title{
+  grid-area:title;
+}
+/*CC: coding competition*/
+/*PC: poster competition*/
+/*BIC: business inovation challenge*/
+/*CSC: cyber security challenge*/
+.competitions_CC, .competitions_PC, .challenges_BIC, .challenges_CSC{
+  display: grid;
+  grid-template-areas: 'face';
+}
+.competitions_CC{
+  grid-area:competitions_CC;
+}
+.competitions_PC{
+  grid-area:competitions_PC;
+}
+.challenges_BIC{
+  grid-area: challenges_BIC;
+}
+.challenges_CSC{
+  grid-area: challenges_CSC;
+}
+.CC_background, .PC_background, .BIC_background, .CSC_background{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-area:face;
+}
+.CC_background{
+  background-image: url('images/CC.jpg');
+}
+.PC_background{
+  background-image: url('images/PC.jpg');
+}
+.BIC_background{
+  background-image: url('images/BIC.jpg');
+}
+.CSC_background{
+  background-image: url('images/CSC.jpg');
+}
+/*card title, face, content, buttons, for each card in contests page*/
+.contests_card_title{
+  align-items: flex-start;
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7), rgba(180,180,180,0));
+  color: rgb(230, 230, 230);
+  display: flex;
+  grid-area:face;
+  height: 20%;
+  justify-content: center;
+  padding-top: 0.7rem;
+  position: relative;
+  z-index: 1;
+}
+.contests_card_face{
+  align-items: center;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  display: flex;
+  grid-area:face;
+  justify-content: center;
+  opacity: 0;
+  position: relative;
+  transition: 0.5s ease;
+}
+.contests_card_content{
+  align-items: center;
+  color: rgb(230, 230, 230);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding-top:4rem;
+  position: relative;
+  text-align: center;
+  transition: 0.5s ease;
+}
+.contests_card_content p{
+  margin: 0.3rem;
+}
+.contests_card_buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+  position: relative;
+  width: 50%;
+}
+/*hover effects for each card*/
+.competitions_CC:hover .contests_card_face, .competitions_PC:hover .contests_card_face, .challenges_BIC:hover .contests_card_face, .challenges_CSC:hover .contests_card_face{
+  opacity: 1;
+}
+.competitions_CC:hover .CC_background, .competitions_PC:hover .PC_background, .challenges_BIC:hover .BIC_background, .challenges_CSC:hover .CSC_background{
+  filter: blur(1px);
+}
+/*end of contests page main content section*/
