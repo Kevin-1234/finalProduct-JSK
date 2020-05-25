@@ -5,7 +5,7 @@
     <meta name="Description" content="This is the website for the event IT Code Fair 2020. You can get relevant event information from here and make a registration.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> IT Code Fair|Home </title>
-    <link rel="stylesheet" href="styles/homeAndResources.css" type="text/css">
+    <link rel="stylesheet" href="styles/home.css" type="text/css">
   </head>
   <body>
 
@@ -31,20 +31,20 @@
             <span>Innovate, create, Have Fun!</span>
           </h1>
         </header>
-        <nav class="navigation"  onmouseover="displayInfo.mouseOverNav()" onmouseout="displayInfo.mouseOutNav()">
+        <nav class="navigation">
           <div class="navigationLogo" >
             <div class="navigationLogo1">
               <a href="https://www.cdu.edu.au/"><img alt="CDU logo" src="images/logo_CDU.png" style="width:91.2px;height:48px;"/></a>
             </div>
             <div class="navigationLogo2">
-              <a href="https://kevin-1234.github.io/MVP_by_JSK"><img alt="IT Code Fair logo" src="images/logo_ICF.png"  style="width:118.56px;height:48px;"/></a>
+              <a href="https://kevin-1234.github.io/finalProduct-JSK/"><img alt="IT Code Fair logo" src="images/logo_ICF.png"  style="width:118.56px;height:48px;"/></a>
             </div>
           </div>
           <div class="navigationLinks">
             <ul>
-              <li><a href="https://kevin-1234.github.io/finalProduct-JSK/competitions.html">Competitions</a></li>
+              <li><a href="https://kevin-1234.github.io/finalProduct-JSK/contests.html">Contests</a></li>
               <li><a href="https://kevin-1234.github.io/finalProduct-JSK/events.html">Events</a></li>
-              <li><a href="https://kevin-1234.github.io/finalProduct-JSK/forIndustry.html">For Industry</a></li>
+              <li><a href="https://kevin-1234.github.io/finalProduct-JSK/forOrganizations.html">For Organizations</a></li>
               <li><a href="https://kevin-1234.github.io/finalProduct-JSK/about.html">About</a></li>
               <li><a href="https://kevin-1234.github.io/finalProduct-JSK/resources.html">Resources</a></li>
             </ul>
@@ -61,13 +61,13 @@
 
       <main class="mainContent">
         <section class="infoButtons">
-          <header class="what" onmouseover="displayInfo.mouseOverWhat()" onmouseout="displayInfo.mouseOutWhat()">
+          <header class="what">
             <h2>What is code fair?</h2>
           </header>
-          <header class="where" onmouseover="displayInfo.mouseOverWhere()" onmouseout="displayInfo.mouseOutWhere()" >
+          <header class="where">
             <h2>Where is code fair?</h2>
           </header>
-          <header class="when" onmouseover="displayInfo.mouseOverWhen()" onmouseout="displayInfo.mouseOutWhen()">
+          <header class="when">
             <h2>Series of Events</h2>
           </header>
         </section>
@@ -78,11 +78,11 @@
             <iframe  title="IT Code Fair Event 2019" src="https://www.youtube.com/embed/W9TWqGPyUKE" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </article>
           <article class="whatDisplayText">
-            <p>
-              <span>Students share their IT skills</span>
-              <span>IT industry connects with students</span>
-              <span>Creative digital problem solving</span>
-            </p>
+
+              <p>Students share their IT skills</p>
+              <p>IT industry connects with students</p>
+              <p>Creative digital problem solving</p>
+
           </article>
           <article class="whereDisplay">
             <div class="map"></div>
@@ -93,12 +93,12 @@
           <article class="whenDisplay">
           </article>
           <article class="whenDisplayText" >
-            <p>
-              <span>16 October, 10 am: Briefing Session for Challenges</span>
-              <span>12 November: Cyber Security Challenge</span>
-              <span>13 November: Business Innovation Challenge</span>
-              <span>15 November: IT Code Fair</span>
-            </p>
+
+              <div class="whenTextBlock1"><h3>16 October</h3>  <p>Briefing Session for Challenges</p></div>
+              <div class="whenTextBlock2"><h3>12 November</h3> <p>Cyber Security Challenge</p></div>
+              <div class="whenTextBlock3"><h3>13 November</h3> <p>Business Innovation Challenge</p></div>
+              <div class="whenTextBlock4"><h3>15 November</h3> <p>IT Code Fair</p></div>
+
           </article>
         </section>
 
@@ -175,28 +175,13 @@
         </section>
 
       </main>
-      <footer class="footer">
-        <table>
-          <tr>
-            <td class="left">Jani Junno s321614</td>
-            <td class="middle">Copyright Team JSK</td>
-            <td class="right">Contact Us:</td>
-          </tr>
-          <tr>
-            <td class="left">Shaakya Weerasundera s307943</td>
-            <td class="middle"></td>
-            <td class="right">info@itcodefair.com.au</td>
-          </tr>
-          <tr>
-            <td class="left">Qingyuan Zeng s316740</td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
+      <footer>
+              <p>&copy; Team-JSK</p>
       </footer>
 
     </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjJsFk46qVmT_KcyOFcYtNqeGAFMbr5ME&callback=initMap"></script>
     <script src="scripts/homePage.js"></script>
 
