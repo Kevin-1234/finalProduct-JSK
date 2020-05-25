@@ -1,1 +1,0 @@
-This is the folder to keep images for HTML pages!
