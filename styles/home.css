@@ -1,0 +1,741 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4{
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 4.6vw;
+}
+h2{
+  font-size: 1.5vw;
+}
+
+h3{
+
+  font-size:2.25vw;
+}
+
+h4{
+
+  font-size: 1.6vw;
+}
+p{
+  font-size: 1.6vw;
+}
+
+.wrapping{
+  font-family: 'Noto Sans', sans-serif;
+  display:grid;
+  grid-template-areas:
+  'banner'
+  'mainContent'
+  'footer';
+  width: 100%;
+}
+
+/*side navigation*/
+.nav{
+  position: fixed;
+  z-index: 3;
+  }
+.sideNav{
+  display: grid;
+  grid-row-gap: 18%;
+  grid-template-columns: 3rem;
+  grid-template-rows: auto auto auto;
+  height: 23%;
+  list-style: none;
+  margin-left: 2%;
+  margin-top: 22%;
+  opacity: 0.5;
+  padding-left: 0;
+  position: fixed;
+  transition: 0.5s ease;
+  width: 2.32%;
+  z-index: 3;
+}
+
+.sideNav  a{
+  align-items: center;
+  border-radius: 1.5rem;
+  border-width: 1px;
+  color: black;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 600;
+  height: 2rem;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.5s ease;
+  width: 2rem;
+}
+
+.sideNav:hover{
+  opacity: 1;
+}
+
+.sideNav:hover a{
+  transform: scale(1.3);
+}
+
+/*3 anchors to locate 3 sections in the web page*/
+.anchor1{
+  position: absolute;
+  margin-top: 0px;
+}
+.anchor2{
+  position: absolute;
+  margin-top: 5600px;
+}
+.anchor3{
+  position: absolute;
+  margin-top: 7600px;
+}
+
+
+.banner{
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url("images/home_banner.jpg");
+  background-position: 50% 35%;
+  background-repeat: no-repeat;
+  background-size:cover;
+  color: white;
+  display: grid;
+  grid-area: banner;
+  grid-template-areas:
+  'nav'
+  'heading';
+  height: 70rem;
+
+}
+
+
+
+.navigation{
+  position: fixed;
+  top:0;
+  background-color: rgb(250, 250, 250);
+  border-bottom-style: solid;
+  border-bottom-width:1px;
+  border-color: rgb(220,220,220);
+  display: grid;
+  grid-area: nav;
+  grid-template-areas: 'logo links socialMedia';
+  grid-template-columns: 15% 70% 15%;
+  height: 3rem;
+  opacity: 0.5;
+  transition: 0.28s ease;
+  width: 100%;
+}
+
+
+
+.navigationLogo{
+  display: flex;
+  flex-direction: row;
+  grid-area: logo;
+  height: 3rem;
+  justify-content: center;
+  width: 100%;
+}
+.navigationLogo1{
+  align-self:flex-start;
+  display: flex;
+  justify-content: flex-start;
+}
+.navigationLogo2{
+  align-self:flex-start;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navigationLinks {
+  align-items: center;
+  display: flex;
+  grid-area: links;
+  height: 3rem;
+  justify-content: center;
+  width: 100%;
+}
+.navigationLinks ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content:flex-end;
+  list-style: none;
+  margin: 0;
+  width: 100%;
+}
+.navigationLinks  li{
+margin-right: 2%;
+}
+.navigationLinks a{
+  align-items: center;
+  color: rgb(49, 48, 46);
+  cursor: pointer;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 600;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-decoration: none;
+  transition: 0.28s ease;
+}
+.navigationLinks  a:hover{
+  background-color:rgb(76, 76, 76);
+  color: white;
+}
+.navigationSocialMedia{
+  align-items: center;
+  display: flex;
+  grid-area: socialMedia;
+  height: 3rem;
+  justify-content: center;
+  width: 100%;
+}
+.navigationSocialMedia a{
+  margin: 0 1rem;
+}
+.heading{
+  align-content: center;
+  display: flex;
+  grid-area: heading;
+  justify-content: center;
+  padding-bottom: 10%;
+  text-align: center;
+}
+
+.heading span{
+  font-size: 1.2vw;
+}
+
+
+.mainContent{
+  display: grid;
+  grid-area: mainContent;
+  grid-template-areas:
+  'infoButtons'
+  'display'
+  'sponsors'
+  'timeTable';
+  grid-template-columns: 100%;
+  height: 500rem;
+  justify-content: center;
+}
+
+/*Information buttons container */
+.infoButtons{
+  align-content: center;
+  background-color: rgb(230, 230, 230);
+  display: grid;
+  grid-area:infoButtons;
+  grid-template-columns:17% 17% 17%;
+  grid-template-rows: 75%;
+  height: 17%;
+  justify-content: center;
+  position: sticky;
+  text-align: center;
+  grid-column-gap: 10rem;
+  top:3%;
+  transition: 1s ease;
+  z-index: -1;
+  width: 100%;
+}
+/*buttons for what, where and events*/
+.what, .where, .when{
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  color: rgb(20,20,20);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.5s ease;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.what{
+  background-color: rgb(20, 20, 92, 0.7);
+}
+.where {
+  background-color: 	rgb(179, 4, 4, 0.7);
+}
+.when {
+  background-color:rgb(57, 56, 56, 0.7);
+}
+
+/*information display panel container*/
+.displayContainer{
+  display: grid;
+  grid-area: display;
+  grid-template-areas: 'show1 show2';
+  grid-template-columns: minmax(auto, 50%) minmax(auto, 50%);
+  grid-template-rows: 100%;
+
+  /*height: 39.1rem;*/
+  height:64.5%;
+  opacity: 0;
+  position: fixed;
+  top:21.5rem;
+  transition: 0.5s ease;
+  width: 100%;
+  z-index: -1;
+  justify-content: center;
+  align-self: center;
+}
+/*information text display panels*/
+.whatDisplayText, .whereDisplayText{
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  grid-area: show1;
+  justify-content: center;
+  opacity: 0;
+  position: relative;
+  transition: 0.5s ease;
+  z-index: 1;
+  margin: 0;
+}
+
+
+.whenDisplayText{
+  grid-area: show1;
+  display: grid;
+  grid-template-areas:
+  'whenTextBlock1 whenTextBlock2'
+  'whenTextBlock3 whenTextBlock4';
+  grid-template-columns: minmax(auto, 50%) minmax(auto, 50%);
+  grid-template-rows:  50% 50%;
+  transition: 0.5s ease;
+  z-index: 1;
+
+}
+.whenTextBlock1, .whenTextBlock2, .whenTextBlock3, .whenTextBlock4{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  color: rgb(230, 230, 230);
+  transition: 0.28s ease;
+}
+
+.whenTextBlock1 {
+  grid-area: whenTextBlock1;
+  border-right-style: solid;
+  border-bottom-style: solid;
+
+
+
+}
+
+.whenTextBlock2 {
+  grid-area: whenTextBlock2;
+  border-bottom-style: solid;
+}
+
+.whenTextBlock3 {
+  border-right-style: solid;
+  grid-area: whenTextBlock3;
+}
+
+.whenTextBlock4 {
+  grid-area: whenTextBlock4;
+}
+
+.whatDisplayText{
+  background-color: rgb(20, 20, 92, 1);
+  z-index: 2;
+}
+.whereDisplayText{
+  background-color: rgb(142, 10, 12, 1);
+
+}
+.whenDisplayText{
+  background-color: rgb(57, 56, 56, 1);
+}
+
+
+/*information media display panels*/
+.whatDisplay, .whereDisplay, .whenDisplay{
+  grid-area: show2;
+  height: 100%;
+  opacity: 0;
+  position: relative;
+  transition: 0.5s ease;
+  width: 100%;
+  z-index: 1;
+}
+.whatDisplay{
+  z-index: 2;
+}
+.whatDisplay iframe{
+  height: 100%;
+  width: 100%;
+  border-style: none;
+}
+.whenDisplay{
+  background-image: url("images/events.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+ .map{
+   width: 100%;
+   height: 100%;
+ }
+
+ /*class for timetable section*/
+.timeTable{
+
+  background-image: url("images/timeTable.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: black;
+  grid-area: timeTable;
+  height: 25rem;
+  opacity: 0;
+  position: sticky;
+  top:3rem;
+  transition: 0.5s ease;
+  width: 100%;
+  z-index: -1;
+}
+
+/*container fpr sponser cards*/
+.sponsors{
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  grid-area: sponsors;
+  height: 18rem;
+  justify-content: space-around;
+  opacity: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  position: sticky;
+  top:30rem;
+  transition: 0.5s ease;
+  z-index: -1;
+}
+
+
+
+/* the size and positions of the containers that include the cards are set here*/
+.container{
+  position: relative;
+  width: 210px;
+  height:24rem;
+  float:left;
+}
+
+/* This sets the size, colour and shape of the cards*/
+.card{
+  position:relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+  text-align: center;
+
+  box-shadow: 0 4px 8px;
+}
+
+/* This sets the size, colour and shape of the front of the cards*/
+.front{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: white;
+
+}
+
+
+/* This sets the size and position of Platinum Sponsor logos*/
+.front .platinum{
+  padding-top: 25px;
+  max-width: 85%;
+}
+
+/* This sets the size and position of Gold Sponsor logos*/
+.front .gold{
+  padding-top: 50px;
+  max-width: 85%;
+}
+
+/* This sets the size and position of Silver Sponsor logos*/
+.front .silver{
+  max-width: 70%;
+}
+
+/* This sets the size and position of Bronze Sponsor logos*/
+.front .bronze{
+  max-width: 33%;
+}
+
+/* This sets the text color for Platinum Sponsor card*/
+.platinum_sponsors, .gold_sponsors, .silver_sponsors, .bronze_sponsors{
+  color:rgb(30, 30, 30);
+}
+
+
+/* This sets the features for the underline under the card headings*/
+hr{
+  width: 80%;
+  border: 1px solid black;
+}
+
+footer{
+
+  background-color: rgb(240,240,240);
+  padding: 3px 3px;
+  color: #333333;
+  text-align: center;
+  grid-area:footer;
+  font-weight: 600;
+}
+
+@media screen and (max-height: 876px){
+  .displayContainer{
+    height:38rem;
+    top:15rem;
+  }
+  .what, .where, .when{
+    height: 10rem;
+  }
+  .timeTable{
+    height:20rem;
+  }
+  .container{
+    height:20rem;
+  }
+  .sponsors{
+    top:24rem;
+  }
+}
+
+@media screen and (max-height: 745px){
+  .displayContainer{
+    height:28rem;
+  }
+  .timeTable{
+    height:18rem;
+  }
+  .container{
+    height:20rem;
+  }
+  .sideNav{
+    margin-top: 19rem;
+  }
+  .sponsors{
+    top:22rem;
+  }
+
+}
+@media screen and (max-height: 655px){
+  .displayContainer{
+    height:23rem;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  .navigation{
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    'logo socialMedia'
+    'links links';
+    height: 6rem;
+  }
+
+  .navigationLinks ul{
+    justify-content:space-evenly;
+  }
+
+}
+@media screen and (max-width: 980px) and (min-width: 506px){
+  .navigation{
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    'logo socialMedia'
+    'links links';
+    height: 6rem;
+  }
+  .navigationLinks ul{
+    justify-content:flex-start;
+  }
+  .navigationLogo{
+    justify-content: flex-start;
+  }
+  .navigationSocialMedia{
+    justify-content: flex-start;
+  }
+  .what, .where, .when{
+    width: 15rem;
+  }
+  .when{
+    margin-right: 10rem;
+  }
+  .displayContainer{
+    width: 50rem;;
+    justify-content: center;
+  }
+ .infoButtons{
+   display: flex;
+ }
+
+}
+
+@media screen and (max-width: 775px) {
+
+  .what, .where, .when{
+    width: 10rem;
+    height:10rem;
+  }
+  .when{
+    margin-right: 18rem;
+  }
+  .displayContainer{
+    width: 40rem;;
+    justify-content: center;
+  }
+ .infoButtons{
+   display: flex;
+   align-items: center;
+   align-content: center;
+ }
+
+}
+
+@media screen and (max-width: 625px) {
+
+  .what, .where, .when{
+    width: 7rem;
+    height:7rem;
+    font-size: 1.3rem;
+  }
+  .when{
+    margin-right: 25rem;
+  }
+  .displayContainer{
+    width: 32rem;;
+    justify-content: center;
+  }
+ .infoButtons{
+   display: flex;
+   align-items: center;
+   align-content: center;
+ }
+
+}
+
+@media screen and (max-width: 500px) and (min-width: 0px){
+  .navigation{
+    grid-template-columns: 90%;
+    grid-template-areas:
+    'logo'
+    'socialMedia'
+    'links';
+    height: 12rem;
+    align-content: center;
+  }
+  h1{
+    font-size:6.75vw;
+  }
+  h3{
+
+    font-size:3.75vw;
+  }
+
+  h4{
+    font-size: 1.6vw;
+  }
+  p{
+    font-size: 5.8vw;
+  }
+  .whenDisplayText p{
+    font-size: 4.8vw;
+
+  }
+  .heading span{
+
+    font-size: 4vw;
+
+  }
+  .navigationLinks ul{
+    justify-content:center;
+  }
+
+  .sideNav{
+    margin-top: 70%;
+  }
+  .banner{
+    width: 100%;
+    background-position: 40% 50%;
+
+  }
+  .mainContent{
+    grid-template-areas:
+    'display'
+    'sponsors'
+    'timeTable'
+    'footer';
+    width: 100%;
+    grid-template-columns: 100%;
+  }
+  .infoButtons{
+    display: none;
+  }
+  .displayContainer{
+    position: sticky;
+    top: 11rem;
+    grid-template-areas:
+    'show1'
+    'show2';
+    grid-template-rows: 70% 70%;
+    grid-template-columns: 100%;
+    }
+
+  .timeTable{
+    display: none;
+  }
+  .sponsors{
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 25%;
+    justify-content: space-around;
+    top:20%;
+    width: 100%;
+  }
+  .container{
+    width: 10rem;
+    height: 20rem;
+  }
+  .footer{
+    height:6%;
+    top: 88.5%;
+  }
+}
