@@ -1,4 +1,4 @@
-//JavaScript file for Home page by Qingyuan Zeng
+
 
 
 class Display {
@@ -21,15 +21,19 @@ class Display {
     this.whenDisplayText = document.querySelector(".whenDisplayText");
     this.timeTable = document.querySelector(".timeTable");
     this.sponsors = document.querySelector(".sponsors");
-    this.footer = document.querySelector(".footer");
+    this.footer = document.querySelector("footer");
     this.navS1 = document.querySelector(".navS1");
     this.navS2 = document.querySelector(".navS2");
     this.navS3 = document.querySelector(".navS3");
 
   }
+
+
   /*navigation hover effect*/
+
   mouseOverNav(){
   this.nav.style.opacity = "1";
+
   }
   mouseOutNav(){
     this.nav.style.opacity = "0.5";
@@ -39,14 +43,13 @@ class Display {
   stickyContent() {
     var scrollTop = document.documentElement.scrollTop;
 
+    //console.log(scrollTop);
+
     if (window.pageYOffset >= 50) {
-      this.nav.classList.add("sticky");
       this.nav.style.opacity = "1";
       this.nav.style.zIndex = "3";
     } else {
-      this.nav.classList.remove("sticky");
       this.nav.style.opacity = "0.5";
-      this.nav.style.zIndex = "0";
     }
 
     /*side nav buttons switch effect and section zIndex switch*/
@@ -54,12 +57,12 @@ class Display {
       this.sectionIndex = 1;
       this.sideNavSwitch();
       this.section_zIndexSwitch();
-    }else if (scrollTop > 550 && scrollTop <= 6000) {
+    }else if (scrollTop > 550 && scrollTop <= 6600) {
       this.sectionIndex = 2;
       this.sideNavSwitch();
       this.section_zIndexSwitch();
     }
-    else if (scrollTop > 6000) {
+    else if (scrollTop > 6600) {
       this.sectionIndex = 3;
       this.sideNavSwitch();
       this.section_zIndexSwitch();
@@ -67,13 +70,13 @@ class Display {
 
 
 
-    if( scrollTop > 550 &&  scrollTop <= 6000 ){
+    if( scrollTop > 200 &&  scrollTop <= 6600 ){
       this.infoButtons.style.opacity = "1";
     }else{
       this.infoButtons.style.opacity = "0";
     }
 
-    if( scrollTop > 2200 &&  scrollTop <= 6000 ){
+    if( scrollTop >= 1100 &&  scrollTop <= 6600){
       this.displayContainer.style.opacity="1";
     }else{
       this.displayContainer.style.opacity = "0";
@@ -93,40 +96,37 @@ class Display {
     }
 
     /*control button fade in and active effects by scrolling */
-    if(  scrollTop > 100 && scrollTop <= 3000){
+    if(  scrollTop > 100 ){
       var opacity = (scrollTop - 100) / 1000;
+      this.what.style.display="flex";
       this.what.style.opacity = opacity;
       if(opacity > 1){
         this.mouseOverWhat();
-      }else{
-        this.mouseOutWhat();
-        }
-    }else{
-      this.mouseOutWhat();
       }
+    }else{
+      this.what.style.display="none";
+    }
 
-    if ( scrollTop > 2000 && scrollTop <= 4200){
+    if ( scrollTop >= 2000){
       var opacity = (scrollTop - 2000) / 1000;
+      this.where.style.display="flex";
       this.where.style.opacity = opacity;
       if(opacity > 1){
         this.mouseOverWhere();
-      }else{
-        this.mouseOutWhere();
-        }
+      }
     }else{
-      this.mouseOutWhere();
+      this.where.style.display="none";
     }
 
-    if ( scrollTop > 3200 && scrollTop <= 5500){
+    if ( scrollTop >= 3200) {
       var opacity = (scrollTop - 3200) / 1000;
+      this.when.style.display="flex";
       this.when.style.opacity = opacity;
       if(opacity > 1){
         this.mouseOverWhen();
-      }else{
-        this.mouseOutWhen();
-        }
+      }
     }else{
-      this.mouseOutWhen();
+      this.when.style.display="none";
     }
 
   }
@@ -193,51 +193,51 @@ class Display {
 /*control a button's looking and what the display panel shows while it is being hovered*/
   mouseOverWhat() {
     this.index = 1;
-    this.what.style.color = "white";
-    this.what.style.backgroundImage = "linear-gradient(rgb(0, 8, 85, 1), rgba(255,255,255,0.5))";
-    this.what.style.backgroundColor =  "rgb(0, 8, 85, 1)";
+    this.what.style.color = "rgb(230,230,230)";
+    this.what.style.backgroundColor = "rgb(20, 20, 92, 1)";
     this.what.style.boxShadow = "5px 5px 15px rgba(0,0,0,1)";
     this.opacitySwitch();
+    this.mouseOutWhere();
+    this.mouseOutWhen();
     setTimeout(this.zIndexSwitch(), 500);
   }
   mouseOutWhat(){
-    this.what.style.color = "black";
-    this.what.style.backgroundImage = "linear-gradient(rgb(0, 8, 85, 0.7), rgba(255,255,255,0.7))";
-    this.what.style.backgroundColor =  "rgb(255, 255, 255, 0)";
+    this.what.style.color = "rgb(20,20,20)";
+    this.what.style.backgroundColor = "	rgb(20, 20, 92, 0.7)";
     this.what.style.boxShadow = "5px 5px 15px rgba(0,0,0,0.6)";
   }
 
 
   mouseOverWhere(){
-    this.where.style.color = "white";
-    this.where.style.backgroundImage = "linear-gradient(rgb(132, 0, 1, 1), rgba(55, 56, 55,0.7))";
-    this.where.style.backgroundColor =  "rgb(132, 0, 1, 1)";
+    this.where.style.color = "rgb(230,230,230)";
+    this.where.style.backgroundColor =  "	rgb(142, 10, 12, 1)";
     this.where.style.boxShadow = "5px 5px 15px rgba(0, 0, 0,1)";
     this.index = 2;
     this.opacitySwitch();
+    this.mouseOutWhat();
+    this.mouseOutWhen();
     setTimeout(this.zIndexSwitch(), 500);
   }
   mouseOutWhere(){
-    this.where.style.color = "black";
-    this.where.style.backgroundImage = "linear-gradient(rgb(132, 0, 1, 0.6), rgb(55, 56, 55, 0.6))";
-    this.where.style.backgroundColor =  "rgb(255, 255, 255, 0)";
+    this.where.style.color = "rgb(20,20,20)";
+    this.where.style.backgroundColor =  "	rgb(179, 4, 4,0.7)";
     this.where.style.boxShadow = "5px 5px 15px rgba(0,0,0,0.6)";
   }
 
   mouseOverWhen(){
-    this.when.style.color = "white";
-    this.when.style.backgroundImage = "linear-gradient(rgb(132, 0, 1, 1), rgb(0, 8, 85, 0.5), rgb(0, 8, 85, 0.8))";
-    this.when.style.backgroundColor =  "rgb(132, 0, 1, 1)";
+    this.when.style.color = "rgb(230,230,230)";
+    this.when.style.backgroundColor =  "rgb(57, 56, 56, 1)";
     this.when.style.boxShadow = "5px 5px 15px rgba(0, 0, 0,1)";
     this.index = 3;
     this.opacitySwitch();
+    this.mouseOutWhat();
+    this.mouseOutWhere();
     setTimeout(this.zIndexSwitch(), 500);
   }
   mouseOutWhen(){
 
-    this.when.style.color = "black";
-    this.when.style.backgroundImage = "linear-gradient(rgb(132, 0, 1, 0.7), rgb(0, 8, 85, 0.4))";
-    this.when.style.backgroundColor =  "rgb(255, 255, 255, 0)";
+    this.when.style.color = "rgb(20,20,20)";
+    this.when.style.backgroundColor =  "rgb(57, 56, 56, 0.7)";
     this.when.style.boxShadow = "5px 5px 15px rgba(0,0,0,0.6)";
 
   }
@@ -301,9 +301,63 @@ class Display {
 
   }
 
+
+
 displayInfo = new Display();
 
+displayInfo.nav.addEventListener("mouseover", function() {displayInfo.mouseOverNav()});
+displayInfo.nav.addEventListener("mouseout", function() {displayInfo.mouseOutNav()});
+
+displayInfo.what.addEventListener("mouseover", function() {displayInfo.mouseOverWhat()});
+displayInfo.what.addEventListener("mouseout", function() {displayInfo.mouseOutWhat()});
+
+displayInfo.where.addEventListener("mouseover", function() {displayInfo.mouseOverWhere()});
+displayInfo.where.addEventListener("mouseout", function() {displayInfo.mouseOutWhere()});
+
+displayInfo.when.addEventListener("mouseover", function() {displayInfo.mouseOverWhen()});
+displayInfo.when.addEventListener("mouseout", function() {displayInfo.mouseOutWhen()});
+
+$(document).ready(function(){
+  $(".whenTextBlock1").mouseover(function(){
+    $(".whenDisplay").css({"background-image":"url('styles/images/BS.jpg')"});
+    $(".whenTextBlock1").css({ "background-color":"rgb(230, 230, 230)", "color":"rgb(30,30,30)"});
+  });
+  $(".whenTextBlock1").mouseout(function(){
+    $(".whenDisplay").css("background-image", "url('styles/images/events.jpg')");
+    $(".whenTextBlock1").css({ "background-color":"rgb(230, 230, 230, 0)", "color":"rgb(230, 230, 230)"});
+  });
+
+  $(".whenTextBlock2").mouseover(function(){
+    $(".whenDisplay").css("background-image", "url('styles/images/CSC.jpg')");
+    $(".whenTextBlock2").css({ "background-color":"rgb(230, 230, 230)", "color":"rgb(30,30,30)"});
+  });
+  $(".whenTextBlock2").mouseout(function(){
+    $(".whenDisplay").css("background-image", "url('styles/images/events.jpg')");
+    $(".whenTextBlock2").css({ "background-color":"rgb(230, 230, 230, 0)", "color":"rgb(230,230,230)"});
+  });
+
+  $(".whenTextBlock3").mouseover(function(){
+    $(".whenDisplay").css("background-image", "url('styles/images/BIC.jpg')");
+    $(".whenTextBlock3").css({ "background-color":"rgb(230, 230, 230)", "color":"rgb(30,30,30)"});
+  });
+  $(".whenTextBlock3").mouseout(function(){
+    $(".whenDisplay").css("background-image", "url('styles/images/events.jpg')");
+    $(".whenTextBlock3").css({ "background-color":"rgb(230, 230, 230, 0)", "color":"rgb(230, 230, 230)"});
+  });
+
+  $(".whenTextBlock4").mouseover(function(){
+    $(".whenDisplay").css("background-image", "url('styles/images/IC.jpg')");
+    $(".whenTextBlock4").css({ "background-color":"rgb(230, 230, 230)", "color":"rgb(30,30,30)"});
+  });
+  $(".whenTextBlock4").mouseout(function(){
+    $(".whenDisplay").css("background-image", "url('styles/images/events.jpg')");
+    $(".whenTextBlock4").css({ "background-color":"rgb(230, 230, 230, 0)", "color":"rgb(230, 230, 230)"});
+  });
+});
+
 window.onscroll = function() {displayInfo.stickyContent()};
+
+
 
 function initMap() {
 
