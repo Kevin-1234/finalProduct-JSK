@@ -1,3 +1,206 @@
+/*imported font family from google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+
+
+body{
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/*define global font sizes*/
+h1, h2, h3, h4{
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 4.6vw;
+}
+h2{
+  font-size: 2.4vw;
+}
+
+h3{
+
+  font-size:2.25vw;
+}
+
+h4{
+
+  font-size: 1.6vw;
+}
+p{
+  font-size: 1.6vw;
+}
+
+/*define layout for all the */
+.wrapping{
+  display:grid;
+  grid-template-areas:
+  'banner'
+  'slogan'
+  'mainContent'
+  'footer';
+}
+.eve_banner, .about_banner, .FO_banner, .contests_banner, .res_banner{
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(230, 230, 230);
+  display: grid;
+  grid-area: banner;
+  grid-template-areas:
+  'nav'
+  'heading';
+  height: 48.75rem;
+}
+
+.eve_banner{
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url('images/eventsBanner.jpg');
+  background-position: 50% 85%;
+}
+
+.about_banner{
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url('images/aboutBanner.jpg');
+  background-position: 50% 25%;
+}
+
+.FO_banner{
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url('images/FO_banner.jpg');
+}
+.contests_banner{
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url('images/contestsBanner.jpg');
+}
+.res_banner{
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url('images/resources_banner.jpg');
+}
+.navigation{
+  position: fixed;
+  background-color: rgb(250, 250, 250);
+  border-bottom-style: solid;
+  border-bottom-width:1px;
+  border-color: rgb(220,220,220);
+  display: grid;
+  grid-area: nav;
+  grid-template-areas: 'logo links socialMedia';
+  grid-template-columns: 15% 70% 15%;
+  height: 3rem;
+  opacity: 0.5;
+  transition: 0.28s ease;
+  width: 100%;
+}
+
+.navigationLogo{
+  display: flex;
+  flex-direction: row;
+  grid-area: logo;
+  height: 3rem;
+  justify-content: center;
+  width: 100%;
+}
+.navigationLogo1{
+  align-self:flex-start;
+  display: flex;
+  justify-content: flex-start;
+}
+.navigationLogo2{
+  align-self:flex-start;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navigationLinks {
+  align-items: center;
+  display: flex;
+  grid-area: links;
+  height: 3rem;
+  justify-content: center;
+  width: 100%;
+}
+.navigationLinks ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content:flex-end;
+  list-style: none;
+  margin: 0;
+  width: 100%;
+}
+.navigationLinks  li{
+margin-right: 2%;
+}
+.navigationLinks a{
+  align-items: center;
+  color: rgb(49, 48, 46);
+  cursor: pointer;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 600;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-decoration: none;
+  transition: 0.28s ease;
+}
+.navigationLinks  a:hover{
+  background-color:rgb(76, 76, 76);
+  color: white;
+}
+.navigationSocialMedia{
+  align-items: center;
+  display: flex;
+  grid-area: socialMedia;
+  height: 3rem;
+  justify-content: center;
+  width: 100%;
+}
+.navigationSocialMedia a{
+  margin: 0 1rem;
+}
+.heading{
+  align-content: center;
+  display: flex;
+  grid-area: heading;
+  justify-content: center;
+  padding-bottom: 10%;
+  text-align: center;
+}
+.heading span{
+  font-size: 1.2rem;
+}
+
+/*define global slogan for each sub page*/
+.slogan{
+  grid-area:slogan;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-weight: 600;
+  line-height: 2.8rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+  color: rgb(230, 230, 230);
+  background-color: rgb(51, 51, 51);
+}
+/*define global subtitles for each sub page*/
+.eve_list_title, .gallery_title, .report_title, .FO_industry_title, .FO_school_title, .competitions_title, .challenges_title, .res_title{
+  text-align: center;
+  color: rgb(230, 230, 230);
+  font-weight: 600;
+  line-height: 2.8rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
 /*contests page main content section*/
 .contests_mainContent{
   background-color: rgb(76, 33, 42);
