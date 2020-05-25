@@ -124,3 +124,111 @@
   filter: blur(1px);
 }
 /*end of contests page main content section*/
+
+/*For Organizations page main content section*/
+.FO_mainContent{
+  display: grid;
+  grid-template-areas:
+  'FO_industry'
+  'FO_school';
+  grid-area: mainContent;
+  background-color: rgb(76, 33, 42);
+}
+.FO_mainContent p{
+  font-size: 1.4rem;
+}
+/*for industry sub section*/
+.FO_industry{
+  grid-area: FO_industry;
+  display: grid;
+  grid-template-areas:
+  'title title title'
+  'FO_industry_ESD FO_industry_judge FO_industry_sponsor';
+  grid-template-columns: repeat(3, 23.75rem);
+  grid-template-rows: 8rem 31.25rem;
+  justify-content: center;
+  grid-column-gap: 1.5rem;
+}
+/*for school sub section*/
+.FO_school{
+  grid-area: FO_school;
+  display: grid;
+  grid-template-areas:
+  'title'
+  'FO_school_CSW';
+  grid-template-columns:  23.75rem;
+  grid-template-rows: 8rem 31.25rem;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+/*titles for each sub section*/
+.FO_industry_title, .FO_school_title{
+  grid-area: title;
+}
+/*ESD: employer speed dating*/
+/*judge: jusdge at code fair*/
+/*sponsor: Sponsor a prize*/
+.FO_industry_ESD, .FO_industry_judge, .FO_industry_sponsor, .FO_school_CSW{
+  transition: 0.5s ease;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  display: grid;
+  grid-template-areas:
+  'cardFace';
+  grid-template-rows: 100%;
+  color: rgb(240,240,240);
+  overflow: hidden;
+}
+.FO_industry_ESD{
+  grid-area: FO_industry_ESD;
+}
+.FO_industry_judge{
+  grid-area: FO_industry_judge;
+}
+.FO_industry_sponsor{
+  grid-area: FO_industry_sponsor;
+}
+.FO_school_CSW{
+  grid-area: FO_school_CSW;
+}
+.FO_industry_ESD_Background, .FO_industry_judge_Background, .FO_industry_sponsor_Background, .FO_school_CSW_Background{
+  grid-area: cardFace;
+  background-size: cover;
+  background-position: 65% 50%;
+  height: 100%;
+  background-image: url("images/ESD.jpg");
+  transition: 0.5s ease;
+}
+.FO_industry_judge_Background{
+  background-position: 50% 50%;
+  background-image: url("images/judge.jpg");
+}
+.FO_industry_sponsor_Background{
+  background-position: 50% 50%;
+  background-image: url("images/sponsor.jpg");
+}
+.FO_school_CSW_Background{
+  background-position: 5% 70%;
+  background-image: url("images/CSW.jpg");
+}
+.FO_industry_ESD:hover, .FO_industry_judge:hover, .FO_industry_sponsor:hover{
+  box-shadow: 5px 5px 15px rgba(0,0,0,1);
+}
+.FO_industry_ESD:hover .FO_industry_ESD_Background, .FO_industry_judge:hover .FO_industry_judge_Background, .FO_industry_sponsor:hover .FO_industry_sponsor_Background, .FO_school_CSW:hover .FO_school_CSW_Background{
+  filter: blur(2px);
+}
+.FO_industry_ESD:hover .cardFace, .FO_industry_judge:hover .cardFace, .FO_industry_sponsor:hover .cardFace, .FO_school_CSW:hover .cardFace{
+  height: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+}
+.FO_industry_ESD:hover .cardTitle hr, .FO_industry_judge:hover .cardTitle hr, .FO_industry_sponsor:hover .cardTitle hr, .FO_school_CSW:hover .cardTitle hr{
+  width:90%;
+  opacity: 1;
+}
+.FO_industry_ESD:hover .cardContent, .FO_industry_judge:hover .cardContent, .FO_industry_sponsor:hover .cardContent, .FO_school_CSW:hover .cardContent{
+  opacity: 1;
+  filter: blur(0px);
+}
+.FO_industry_ESD:hover .cardButton, .FO_industry_judge:hover .cardButton, .FO_industry_sponsor:hover .cardButton, .FO_school_CSW:hover .cardButton{
+  opacity: 1;
+}
+/*end of for Organizations page content section*/
