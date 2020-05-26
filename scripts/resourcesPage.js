@@ -1,4 +1,4 @@
-//JS file for resources page by Qingyuan Zeng
+
 
 
 //stick navigation bar
@@ -31,9 +31,7 @@ $(document).ready(function(){
    var res_className = className.replace("Title", "");
    var panel_className = className.replace("Title", "_panel");
 
-     $("."+res_className).css({
-     filter: 'blur(0px)' }
-    );
+
     $("."+className).animate({
      opacity:0 },'100'
     );
@@ -47,9 +45,7 @@ $(document).ready(function(){
      var res_className = className.replace("Title", "");
      var panel_className = className.replace("Title", "_panel");
 
-     $("."+res_className).css({
-       filter: 'blur(3px)' }
-     );
+
      $("."+className).animate({
        opacity:1 },50
      );
@@ -68,9 +64,7 @@ $(document).ready(function(){
      var res_className = className.replace("_panel", "");
      var title_className = className.replace("_panel", "Title");
      $("."+className).stop();
-     $("."+res_className).css({
-       filter: 'blur(0px)' }
-     );
+
      $("."+title_className).stop();
      $("."+className).css({
        display:'flex'});
@@ -78,9 +72,7 @@ $(document).ready(function(){
      var className = $(this).attr('class');
      var res_className = className.replace("_panel", "");
      var title_className = className.replace("_panel", "Title");
-     $("."+res_className).css({
-       filter: 'blur(3px)' }
-     );
+
      $("."+className).animate({
        opacity:0,height: '0rem'}, '200'
      );
