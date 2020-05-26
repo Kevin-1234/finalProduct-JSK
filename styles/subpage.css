@@ -1087,7 +1087,7 @@ strong{
 }
 
 /* This sets the position and colour of the blurb under the top banner on the pages*/
-.heading, .caption{
+.contestsInfo_heading, .caption{
   text-align: center;
   max-width:80%;
   color: #333333;
