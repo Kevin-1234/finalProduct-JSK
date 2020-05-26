@@ -198,7 +198,329 @@ margin-right: 2%;
   align-items: center;
 }
 
+/*events page content section*/
+.eve_mainContent{
+  display: grid;
+  grid-area: mainContent;
+  grid-template-areas:
+  'eve_list';
+}
+.eve_list{
+  grid-area: eve_list;
+  display: grid;
+  grid-template-areas:
+  'title title title'
+  'event_ESD event_CSW event_AEA';
+  grid-template-columns: repeat(3, 28.5rem);
+  grid-template-rows: 7rem 41.75rem;
+  background-color: rgb(76, 33, 42);
+  justify-content: center;
+  align-content: center;
+  grid-gap: 2.5rem;
+  height:58rem;
+  transition: 0.5s ease;
+}
+.eve_list_title{
+  grid-area: title;
+}
+/*ESD: employer speed dating*/
+/*CSW: cyber security workshop*/
+/*academic excellence awards: cyber security workshop*/
+.event_ESD, .event_CSW, .event_AEA{
+  transition: 0.5s ease;
+  display: grid;
+  grid-template-areas:
+  'cardFace';
+  grid-template-rows: 100%;
+  color: rgb(240,240,240);
+  overflow: hidden;
+}
+.event_ESD{
+grid-area:event_ESD;
+}
+.event_CSW{
+  grid-area:event_CSW;
+}
+.event_AEA{
+  grid-area:event_AEA;
+}
+.CSW_Background, .AEA_Background, .ESD_Background{
+  grid-area: cardFace;
+  background-size: cover;
+  height: 100%;
+  transition: 0.5s ease;
+}
+.CSW_Background{
+  background-position: 5% 70%;
+  background-image: url("images/CSW.jpg");
+}
+.AEA_Background{
+  background-position: 65% 50%;
+  background-image: url("images/academicExcellence.jpg");
+}
+.ESD_Background{
+  background-size: 58.75rem 41.75rem;
+  background-position: 65% 50%;
+  background-image: url("images/ESD.jpg");
+}
+/*card face, title, content and buttons for each card in events page*/
+.cardFace{
+  position: relative;
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.7), rgba(180,180,180,0));
+  grid-area: cardFace;
+  height: 15%;
+  transition: 0.5s ease;
+}
+.cardTitle hr{
+  width: 0;
+  opacity: 0;
+  transition: 0.6s ease;
+  margin-top: 1.7rem;
+  background-color: rgb(230,230,230);
+  height: 1px;
+}
+.cardTitle{
+  color: rgb(230,230,230);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  height: 10%;
+  padding-top: 1.2rem;
+}
+.cardContent{
+  filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  transition: 1.1s ease;
+  height: 65%;
+  opacity: 0;
+  }
+.cardContent p{
+    font-weight: 600;
+    margin: 0.8rem;
+    line-height: 2.3rem;
+  }
+.cardButton{
+  height: 21%;
+  opacity: 0;
+  transition: 0.6s ease;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-left:2rem;
+  padding-right: 2rem;
+}
+.reg_Button{
+  border-radius: 2rem;
+  border-style: none;
+  background-color: rgb(0, 103, 192);
+  height: 2rem;
+  width: 4.5rem;
+  color: rgb(230,230,230);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.reg_Button:hover{
+  transform: scale(1.4);
+  color: rgb(30, 30, 30);
+}
+.info_Button{
+  background-color:rgb(1, 179, 96);
+  border-radius: 2rem;
+  border-style: none;
+  height: 2rem;
+  width: 4.5rem;
+  color: rgb(230,230,230);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.info_Button:hover{
+  transform: scale(1.4);
+  color: rgb(30, 30, 30);
+}
+/*hover effects of each card in events content section*/
+.event_ESD:hover, .event_CSW:hover, .event_AEA:hover{
+  box-shadow: 5px 5px 15px rgba(0,0,0,1);
+}
+.event_ESD:hover .ESD_Background, .event_CSW:hover .CSW_Background, .event_AEA:hover .AEA_Background{
+  filter:  blur(2px);
+}
+.event_ESD:hover .cardFace, .event_CSW:hover .cardFace, .event_AEA:hover .cardFace{
+  height: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+}
+.event_ESD:hover .cardTitle hr, .event_CSW:hover .cardTitle hr, .event_AEA:hover .cardTitle hr{
+  width:90%;
+  opacity: 1;
+}
+.event_ESD:hover .cardContent, .event_CSW:hover .cardContent, .event_AEA:hover .cardContent{
+  opacity: 1;
+  filter: blur(0px);
+}
+.event_ESD:hover .cardButton, .event_CSW:hover .cardButton, .event_AEA:hover .cardButton{
+  opacity: 1;
+}
+/*end of events page content section*/
 
+/*about page content section*/
+.about_mainContent{
+  display: grid;
+  grid-area: mainContent;
+  grid-template-areas:
+  'about_gallery'
+  'about_report';
+  background-color: rgb(76, 33, 42);
+}
+/*about page gallery sub section*/
+.about_gallery{
+    grid-area: about_gallery;
+    display: grid;
+    grid-template-areas:
+    'gallery_title gallery_title gallery_title gallery_title gallery_title gallery_title'
+    'album1 album1 album2 album2 album3 album3'
+    'none1  album4 album4 album5 album5 none2';
+    grid-template-columns: repeat(6, 12rem) ;
+    grid-template-rows: 8rem 19rem 19rem;
+    justify-content: center;
+    grid-column-gap: 1.5rem;
+}
+/*about page gallery report sub section*/
+.about_report{
+  grid-area: about_report;
+  display: grid;
+  grid-template-areas:
+  'report_title report_title'
+  'report1 report2';
+  grid-template-columns: repeat(2, 18rem);
+  grid-template-rows: 8rem 25rem;
+  grid-column-gap: 2.5rem;
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+.gallery_title{
+  grid-area: gallery_title;
+}
+.report_title{
+  grid-area: report_title;
+}
+.competitions_title{
+  grid-area: title;
+}
+.album1, .album2, .album3, .album4, .album5{
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  display: grid;
+  grid-template-areas: 'face';
+}
+.album1 a, .album2 a, .album3 a, .album4 a, .album5 a{
+  grid-area: face;
+  text-decoration: none;
+}
+.album1_background, .album2_background, .album3_background, .album4_background, .album5_background{
+  grid-area: face;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 100%;
+  transition: 0.5s ease;
+}
+.album1_background{
+  background-image: url('images/CF2018.jpg');
+}
+.album2_background{
+  background-image: url('images/CF2017.jpg');
+}
+.album3_background{
+  background-image: url('images/CF2016.jpg');
+}
+.album4_background{
+  background-image: url('images/CF2015.jpg');
+}
+.album5_background{
+  background-image: url('images/CF2014.jpg');
+}
+/*album title for each card in about page*/
+.album_title{
+  background-position: bottom;
+  background-image:linear-gradient(to top, rgb(0, 0, 0, 0.8),rgb(0, 0, 0, 0.7),rgb(230, 230, 230, 0));
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height:100%;
+  width: 100%;
+  transition: 0.5s ease;
+}
+.album_title h4{
+  color: rgb(230,230,230);
+  padding-bottom: 0.7rem;
+  transform: translateY(-24px);
+  transition: 0.5s ease;
+}
+.album1{
+  grid-area:album1;
+}
+.album2{
+  grid-area:album2;
+}
+.album3{
+  grid-area:album3;
+}
+.album4{
+  margin-top: 3rem;
+  grid-area:album4;
+}
+.album5{
+  margin-top: 3rem;
+  grid-area:album5;
+}
+/*hover effects for each card*/
+.album1:hover .album1_background, .album2:hover .album2_background, .album3:hover .album3_background, .album4:hover .album4_background, .album5:hover .album5_background{
+  transform: scale(1.2);
+}
+.album1:hover .album_title h4, .album2:hover .album_title h4, .album3:hover .album_title h4, .album4:hover .album_title h4, .album5:hover .album_title h4{
+font-size: 1.4rem;
+transform: translateY(0px);
+}
+.album1:hover .album_title, .album2:hover .album_title, .album3:hover .album_title, .album4:hover .album_title, .album5:hover .album_title{
+  opacity: 0.8;
+  background-size: 100% 20%;
+}
+/*for each report in about page*/
+.report1, .report2{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.3s ease;
+}
+.report1:hover, .report2:hover{
+  transform: scale(1.5);
+}
+.report1{
+  display: grid;
+  grid-template-areas:'face';
+  background-image: url('images/2016_report.jpg');
+  grid-area: report1;
+}
+.report2{
+  display: grid;
+  grid-template-areas:'face';
+  background-image: url('images/2014_report.jpg');
+  grid-area: report2;
+}
+/*end of about page content section*/
 
 
 /*contests page main content section*/
