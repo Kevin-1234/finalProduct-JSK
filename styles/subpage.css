@@ -438,7 +438,133 @@ margin-right: 2%;
 
 
 
+/*resources page content section*/
+.res_mainContent{
+  display: grid;
+  grid-area: mainContent;
+  grid-template-areas:
+  'title'
+  'res_display ';
+  grid-template-rows: 8rem auto;
+  text-align: center;
+  justify-content: center;
+  background-color: rgb(76, 33, 42);
 
+
+}
+
+.res_title{
+  grid-area: title;
+}
+/*this class is the container for the display area that shows series of resources */
+.res_display{
+  display: grid;
+  grid-area: res_display;
+  grid-template-areas:
+  'resource1-1 resource1-2 resource1-3'
+  'content1 content2 content3';
+  grid-template-columns: repeat(3, 28rem);
+  grid-template-rows: 20rem 20rem;
+  height: 50rem;
+  grid-column-gap:1.5rem;
+  padding-top: 2%;
+  text-decoration: none;
+  justify-content: center;
+
+}
+
+.res_display a{
+  color:black;
+  text-decoration:none;
+  transition: 0.3s ease;
+
+}
+.res_display a:hover{
+  color: rgb(158, 8, 7);
+}
+/*resource cubes*/
+.resource1-1, .resource1-2, .resource1-3{
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  position: relative;
+  transition:0.5s ease;
+  width: 100%;
+}
+.resource1-1{
+  background-image: url("images/poster.jpg");
+  grid-area: resource1-1;
+}
+.resource1-2{
+  background-image: url("images/webDev.jpg");
+  grid-area: resource1-2;
+}
+.resource1-3{
+  background-image: url("images/presentation.jpg");
+  grid-area: resource1-3;
+}
+
+/*resource title masks*/
+.resource1-1Title, .resource1-2Title, .resource1-3Title{
+  align-items: center;
+
+  background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
+  color:rgb(230,230,230);
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: center;
+  opacity: 1;
+  position: relative;
+  transition: 0.2s ease;
+  width: 100%;
+  z-index: 2;
+}
+.resource1-1Title{
+  grid-area: resource1-1;
+}
+.resource1-2Title{
+  grid-area: resource1-2;
+}
+.resource1-3Title{
+  grid-area: resource1-3;
+}
+/*resources display panels for each resource cube*/
+.resource1-1_panel, .resource1-2_panel, .resource1-3_panel{
+  background-image: linear-gradient(rgb(210,210,210),rgb(180,180,180));
+
+  display: none;
+  font-size: 1.3rem;
+  font-weight: 400;
+  height: 0rem;
+  opacity:0;
+  position: relative;
+  width: 100%;
+
+}
+.resource1-1_panel{
+  grid-area: content1;
+}
+.resource1-2_panel{
+  grid-area: content2;
+}
+.resource1-3_panel{
+  grid-area: content3;
+}
+
+.resource1-1_panel ul, .resource1-2_panel ul, .resource1-3_panel ul {
+  list-style: none;
+  text-align: center;
+  line-height: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+
+}
+
+/*end of resource page content section*/
 
 
 
@@ -776,6 +902,83 @@ footer{
   }
   .FO_mainContent p, footer p{
     font-size: 3vw;
+  }
+}
+
+
+
+
+
+/*resources page responsive design */
+@media screen and (max-width: 1415px){
+
+  .res_display{
+    grid-template-areas:
+    'resource1-1 resource1-2 resource1-3'
+    'content1 content2 content3';
+    grid-template-columns: repeat(3, 21rem);
+    grid-template-rows: 15rem 15rem;
+    height: 50rem;
+    grid-column-gap:1rem;
+    padding-top: 2%;
+    text-decoration: none;
+  }
+
+
+}
+
+@media screen and (max-width: 1060px){
+
+  .res_display{
+    grid-template-areas:
+    'resource1-1 resource1-1 resource1-2 resource1-2'
+    'content1 content1 content2 content2'
+    '..... resource1-3 resource1-3 ....'
+    '..... content3 content3 ....';
+    grid-template-columns: repeat(4, 10.5rem);
+    grid-template-rows: 15rem 25rem 15rem 25rem;
+    height: 80rem;
+    grid-column-gap:1rem;
+    padding-top: 2%;
+    text-decoration: none;
+  }
+
+}
+
+@media screen and (max-width: 738px){
+
+  .res_display{
+    grid-template-areas:
+    'resource1-1'
+    'content1'
+    'resource1-2'
+    'content2'
+    'resource1-3'
+    'content3';
+    grid-template-columns: 28rem;
+    grid-template-rows: 20rem 28rem 20rem 28rem 20rem 28rem;
+    height: 150rem;
+    padding-top: 2%;
+    text-decoration: none;
+  }
+
+  .res_banner{
+    height: 39rem;
+  }
+  .res_banner h1{
+    font-size: 7.2vw;
+  }
+  .res_banner + h2{
+    font-size: 3.2vw;
+  }
+  .res_mainContent h3{
+    font-size: 3.8vw;
+  }
+  .res_mainContent h4{
+    font-size: 3.4vw;
+  }
+  .res_mainContent p, footer p{
+    font-size: 4.2vw;
   }
 }
 
