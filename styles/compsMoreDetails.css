@@ -6,6 +6,7 @@ body{
 /* Contributed by Qingyuan Zeng s316740 (lines 2 - 80)*/
 .navigation{
   position: fixed;
+  top:0;
   background-color: rgb(250, 250, 250);
   border-bottom-style: solid;
   border-bottom-width:1px;
