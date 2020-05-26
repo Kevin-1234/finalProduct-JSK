@@ -1,25 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+
+
 body{
-  font-family: Garamond;
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 /* Contributed by Qingyuan Zeng s316740 (lines 2 - 80)*/
 .navigation{
-  background-color: rgb(255, 255, 255);
-  display: grid;
-  grid-area: nav;
-  opacity: 0.5;
-  height: 3rem;
-  grid-template-areas: 'logo link socialMedia';
-  grid-template-columns: 15% 70% 15%;
-  transition: 0.28s ease;
+  position: fixed;
+  background-color: rgb(250, 250, 250);
   border-bottom-style: solid;
   border-bottom-width:1px;
   border-color: rgb(220,220,220);
-}
-
-
-.sticky {
-  position: fixed;
-  top: 0;
+  display: grid;
+  grid-area: nav;
+  grid-template-areas: 'logo links socialMedia';
+  grid-template-columns: 15% 70% 15%;
+  height: 3rem;
+  opacity: 0.5;
+  transition: 0.28s ease;
   width: 100%;
 }
 
@@ -27,58 +28,80 @@ body{
   display: flex;
   flex-direction: row;
   grid-area: logo;
+  height: 3rem;
+  justify-content: center;
+  width: 100%;
 }
-
 .navigationLogo1{
+  align-self:flex-start;
   display: flex;
   justify-content: flex-start;
-  align-self:flex-start;
 }
-
 .navigationLogo2{
+  align-self:flex-start;
   display: flex;
   justify-content: flex-start;
-  align-self:flex-start;
 }
 
 .navigationLinks {
+  align-items: center;
+  display: flex;
+  grid-area: links;
+  height: 3rem;
+  justify-content: center;
+  width: 100%;
+}
+.navigationLinks ul{
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  height: 3rem;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content:flex-end;
+  list-style: none;
+  margin: 0;
+  width: 100%;
 }
-
-
-.navigationLinks  a{
-  display: flex;
+.navigationLinks  li{
+margin-right: 2%;
+}
+.navigationLinks a{
   align-items: center;
+  color: rgb(49, 48, 46);
+  cursor: pointer;
+  display: flex;
   font-size: 1.1rem;
   font-weight: 600;
-  color: rgb(49, 48, 46);
-  text-decoration: none;
   height: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
-  margin-left: 7%;
+  text-decoration: none;
   transition: 0.28s ease;
-  cursor: pointer;
 }
-
 .navigationLinks  a:hover{
   background-color:rgb(76, 76, 76);
   color: white;
 }
-
 .navigationSocialMedia{
-  grid-area: socialMedia;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  display: flex;
+  grid-area: socialMedia;
   height: 3rem;
+  justify-content: center;
+  width: 100%;
 }
-
 .navigationSocialMedia a{
   margin: 0 1rem;
+}
+.heading{
+  align-content: center;
+  display: flex;
+  grid-area: heading;
+  justify-content: center;
+  padding-bottom: 10%;
+  text-align: center;
+}
+.heading span{
+  font-size: 1.2rem;
 }
 
 
