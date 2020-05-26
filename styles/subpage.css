@@ -901,7 +901,9 @@ transform: translateY(0px);
   margin-left: auto;
   margin-right: auto;
 }
-
+.image{
+  width: 100%;
+}
 .red_text{
   color: red;
 }
