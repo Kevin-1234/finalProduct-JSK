@@ -328,7 +328,7 @@ $(document).ready(function(){
   });
 
   $(".whenTextBlock2").mouseover(function(){
-    $(".whenDisplay").css("background-image", "url('styles/images/CSC.jpg')");
+    $(".whenDisplay").css("background-image", "url('styles/images/CSC.JPG')");
     $(".whenTextBlock2").css({ "background-color":"rgb(230, 230, 230)", "color":"rgb(30,30,30)"});
   });
   $(".whenTextBlock2").mouseout(function(){
@@ -337,7 +337,7 @@ $(document).ready(function(){
   });
 
   $(".whenTextBlock3").mouseover(function(){
-    $(".whenDisplay").css("background-image", "url('styles/images/BIC.jpg')");
+    $(".whenDisplay").css("background-image", "url('styles/images/BIC.JPG')");
     $(".whenTextBlock3").css({ "background-color":"rgb(230, 230, 230)", "color":"rgb(30,30,30)"});
   });
   $(".whenTextBlock3").mouseout(function(){
