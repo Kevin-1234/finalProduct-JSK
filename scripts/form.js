@@ -2,6 +2,21 @@
 var submission_text = document.querySelector('.submission_text');
 var form = document.querySelector('.form_container');
 submission_text.classList.add('hidden');
+var nav = document.querySelector(".navigation");
+function mouseOverNav(){
+nav.style.opacity = "1";
+}
+function mouseOutNav(){
+nav.style.opacity = "0.5";
+}
+function stickyNav(){
+  if (window.pageYOffset >= 50) {
+  nav.style.opacity = "1";
+  nav.style.zIndex = "3";
+} else {
+  nav.style.opacity = "0.5";
+}}
+window.onscroll = function() {stickyNav()};
 
 function checkFields(evt){
       evt.preventDefault();
