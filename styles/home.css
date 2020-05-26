@@ -251,7 +251,7 @@ margin-right: 2%;
   position: sticky;
   text-align: center;
   grid-column-gap: 10rem;
-  top:3%;
+  top:1.5rem;
   transition: 1s ease;
   z-index: -1;
   width: 100%;
@@ -613,7 +613,7 @@ footer{
 
 }
 
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 775px) and (min-width: 626px){
 
   .what, .where, .when{
     width: 10rem;
@@ -634,7 +634,7 @@ footer{
 
 }
 
-@media screen and (max-width: 625px) {
+@media screen and (max-width: 625px) and (min-width: 501px){
 
   .what, .where, .when{
     width: 7rem;
@@ -665,6 +665,7 @@ footer{
     'links';
     height: 12rem;
     align-content: center;
+    justify-content: center;
   }
   h1{
     font-size:6.75vw;
@@ -719,7 +720,7 @@ footer{
     grid-template-areas:
     'show1'
     'show2';
-    grid-template-rows: 70% 70%;
+    grid-template-rows: 52% 52%;
     grid-template-columns: 100%;
     }
 
