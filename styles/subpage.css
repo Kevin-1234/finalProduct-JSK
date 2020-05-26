@@ -1079,6 +1079,47 @@ strong{
 
 
 
+/*contest information page content section*/
+
+/* This sets the size of the banner images for the pages*/
+.comps_info_cover_image{
+  max-width: 100%;
+}
+
+/* This sets the position and colour of the blurb under the top banner on the pages*/
+.heading, .caption{
+  text-align: center;
+  max-width:80%;
+  color: #333333;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Competitions More Details page (Contributed by Shaakya Weerasundera s307943)*/
+
+.comps_details_container{
+  width:80%;
+  max-width: 900px;
+  color: #333333;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* This style is for every card (coding Competition, poster Competition, Business Innovation Challenge, Cybersecurity Challenge )*/
+
+.coding, .poster, .bic, .cyber{
+  padding: 20px;
+  box-shadow: 0 4px 8px;
+  background: #dcdcdc;
+}
+
+p,
+strong{
+  font-size: 20px;
+}
+/*end of contest information page content section*/
+
 
 /* This sets the background colour, padding and text colou for footer*/
 footer{
