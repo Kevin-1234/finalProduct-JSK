@@ -891,6 +891,195 @@ transform: translateY(0px);
 
 
 
+
+/* More info page starts here */
+
+.more_info_container{
+  width:80%;
+  max-width: 900px;
+  color: #333333;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.red_text{
+  color: red;
+}
+
+.more_info_content{
+  padding: 20px;
+  box-shadow: 0 4px 8px;
+  background: #dcdcdc;
+}
+
+.students_container{
+  display: grid;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  grid-template-columns: auto auto auto;
+}
+
+.student{
+  background: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  box-shadow: 0 4px 4px;
+}
+
+
+/*Registration form css starts here */
+
+/* Container that holds the content */
+.form_container{
+  width: 80%;
+  max-width: 500px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px;
+  padding: 20px;
+}
+
+/* Styling and position for registration content title */
+.title{
+  margin-bottom: 25px;
+  color: #ff2020;
+  text-align: center;
+}
+
+/* Styling for the form fields */
+.field{
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+/* Styling and position for registration content title */
+label{
+   width: 30%;
+   margin-right: 10px;
+}
+
+/* Styling for text fields on the form */
+.details,
+.textbox,
+.hiddenbox{
+  width: 95%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+
+/* Position and size for the select menus on the form */
+.select_menu{
+  position: relative;
+  width: 100%;
+  height: 37px;
+}
+
+/* Styling and positioning for the selection menus on the form */
+.select_menu:before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border: 8px solid;
+  border-color: #d5dbd9 transparent transparent transparent;
+}
+
+/* Size and styling for the arrow on the selection menu */
+.select_menu select{
+  -webkit-appearance: none;
+  -moz-appearance:   none;
+  appearance:        none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d5dbd9;
+  border-radius: 3px;
+}
+
+/* Interactive feature colour for the form fields */
+.details:focus,
+.textarea:focus,
+.select_menu select:focus{
+  border: 1px solid #ff2020;
+}
+
+/* position and size for the checkbox text */
+.check{
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+}
+
+/* Position for the checkbox */
+input[type="checkbox"]{
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* Styling for the checkbox */
+.checked{
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ff2020;
+  display: block;
+  position: relative;
+}
+
+/* Sets the checkbox color to red when clicked */
+.check input[type="checkbox"]:checked ~ .checked{
+  background: #ff2020;
+}
+
+/* Set the font family to same as the rest of the page for textbox */
+textarea{
+  font-family: Garamond;
+}
+
+/* Styling for the registration button */
+.btn{
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 0px;
+  background:  #ff2020;
+  color: #fff;
+  border-radius: 3px;
+}
+
+/* Hover effect for the redistration button */
+.btn:hover{
+  background: #ff5959;
+}
+
+.submission_text{
+  text-align: center;
+}
+
+.hidden{
+  display: none;
+}
+
+span{
+  color: #ff2020;
+}
+
+p,
+strong{
+  font-size: 20px;
+}
+
+
+
+
 /* This sets the background colour, padding and text colou for footer*/
 footer{
   background-color: rgb(240,240,240);
