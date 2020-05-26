@@ -927,6 +927,15 @@ transform: translateY(0px);
   box-shadow: 0 4px 4px;
 }
 
+.blurb{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  margin-top: 3rem;
+  color: rgb(30,30,30);
+}
+
 
 /*Registration form css starts here */
 
@@ -1041,8 +1050,9 @@ input[type="checkbox"]{
 
 /* Set the font family to same as the rest of the page for textbox */
 textarea{
-  font-family: Garamond;
+  
 }
+
 
 /* Styling for the registration button */
 .btn{
